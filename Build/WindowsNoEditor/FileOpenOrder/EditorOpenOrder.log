@@ -1956,259 +1956,319 @@
 "../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uasset" 1956
 "../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Intermediate/AssetRegistryCache/311563bb.bin" 1957
 "../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Intermediate/AssetRegistryCache/c90e3f55.bin" 1958
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/MainScene.umap" 1959
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/MainScene_BuiltData.uasset" 1960
-"../../../Engine/Content/EditorResources/SequenceRecorder/Countdown.uasset" 1961
-"../../../Engine/Content/EditorResources/SequenceRecorder/RecordingIndicator.uasset" 1962
-"../../../Engine/Content/BasicShapes/Cube.uasset" 1963
-"../../../Engine/Content/BasicShapes/Sphere.uasset" 1964
-"../../../Engine/Content/BasicShapes/Cylinder.uasset" 1965
-"../../../Engine/Content/BasicShapes/Cone.uasset" 1966
-"../../../Engine/Content/BasicShapes/Plane.uasset" 1967
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Intermediate/AssetRegistryCache/80733c15.bin" 1968
-"../../../Engine/Content/Maps/Templates/TimeOfDay_Default.umap" 1969
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Ball.uasset" 1970
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/GoldburgGMB.uasset" 1971
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/MachineObjectTemp.uasset" 1972
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Player.uasset" 1973
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/TrackCurve.uasset" 1974
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/TrackrAMP.uasset" 1975
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/TrackSlide.uasset" 1976
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/TrackStraight.uasset" 1977
-"../../../Engine/Content/ArtTools/RenderToTexture/Blueprints/RenderToTexture_Game.uasset" 1978
-"../../../Engine/Content/ArtTools/RenderToTexture/Blueprints/RenderToTexture_LevelBP.uasset" 1979
-"../../../Engine/Content/ArtTools/RenderToTexture/Blueprints/RenderToTexture_Pawn.uasset" 1980
-"../../../Engine/Content/ArtTools/RenderToTexture/Macros/RenderToTextureFunctionLibrary.uasset" 1981
-"../../../Engine/Content/ArtTools/RenderToTexture/Macros/RenderToTextureMacros.uasset" 1982
-"../../../Engine/Content/EditorBlueprintResources/ActorMacros.uasset" 1983
-"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 1984
-"../../../Engine/Content/EngineSky/BP_Sky_Sphere.uasset" 1985
-"../../../Engine/Content/FunctionalTesting/Blueprints/AITesting_MoveGoal.uasset" 1986
-"../../../Engine/Content/Sequencer/DefaultBurnInOptions.uasset" 1987
-"../../../Engine/Content/Tutorial/Basics/ContentBrowserOverview.uasset" 1988
-"../../../Engine/Content/Tutorial/Basics/FeaturePacks.uasset" 1989
-"../../../Engine/Content/Tutorial/Basics/ViewportsTutorial.uasset" 1990
-"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintEditorTutorial.uasset" 1991
-"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintInterfacesEditorOverview.uasset" 1992
-"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintMacroLibrariesEditorOverview.uasset" 1993
-"../../../Engine/Content/Tutorial/BlueprintTutorials/ClassBlueprintsEditorOverview.uasset" 1994
-"../../../Engine/Content/Tutorial/BlueprintTutorials/LevelBlueprintEditorOverview.uasset" 1995
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_Class.uasset" 1996
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_Interface.uasset" 1997
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_MacroLib.uasset" 1998
-"../../../Engine/Content/Tutorial/Code/AddingCode.uasset" 1999
-"../../../Engine/Content/Tutorial/Foliage/FoliageWalkThrough.uasset" 2000
-"../../../Engine/Content/Tutorial/Foliage/Foliage_Intro_Tutorial.uasset" 2001
-"../../../Engine/Content/Tutorial/Foliage/Foliage_Settings_Tutorial.uasset" 2002
-"../../../Engine/Content/Tutorial/Foliage/Foliage_Using_The_Tool_Tutorial.uasset" 2003
-"../../../Engine/Content/Tutorial/Installation/InstallingVisualStudioTutorial.uasset" 2004
-"../../../Engine/Content/Tutorial/Installation/InstallingXCodeTutorial.uasset" 2005
-"../../../Engine/Content/Tutorial/InWorldBlueprintEditing/IWBE_Tutorial.uasset" 2006
-"../../../Engine/Content/Tutorial/InWorldBlueprintEditing/IWBE_Tutorial_Part2.uasset" 2007
-"../../../Engine/Content/Tutorial/InWorldBlueprintEditing/IWBE_Tutorial_Part3.uasset" 2008
-"../../../Engine/Content/Tutorial/InWorldBlueprintEditing/TutorialAssets/IWBE_Blutility.uasset" 2009
-"../../../Engine/Content/Tutorial/InWorldBlueprintEditing/TutorialAssets/IWBE_Bridge1.uasset" 2010
-"../../../Engine/Content/Tutorial/InWorldBlueprintEditing/TutorialAssets/IWBE_Bridge2.uasset" 2011
-"../../../Engine/Content/Tutorial/Landscape/LandscapeWalkThrough.uasset" 2012
-"../../../Engine/Content/Tutorial/Landscape/Landscape_Manage_Mode.uasset" 2013
-"../../../Engine/Content/Tutorial/Landscape/Landscape_Painting_Mode.uasset" 2014
-"../../../Engine/Content/Tutorial/Landscape/Landscape_Sculpt_Mode.uasset" 2015
-"../../../Engine/Content/Tutorial/Mobile/CreatingSigningCertAndProvisionTutorial.uasset" 2016
-"../../../Engine/Content/Tutorial/Mobile/InstallingiTunesTutorial.uasset" 2017
-"../../../Engine/Content/Tutorial/Mobile/SettingUpAndroidTutorial.uasset" 2018
-"../../../Engine/Content/Tutorial/Mobile/SettingUpLuminTutorial.uasset" 2019
-"../../../Engine/Content/Tutorial/Paper2D/FlipbookEditorTutorial.uasset" 2020
-"../../../Engine/Content/Tutorial/Paper2D/SpriteEditorTutorial.uasset" 2021
-"../../../Engine/Content/Tutorial/SubEditors/GettingSubstance.uasset" 2022
-"../../../Engine/Content/Tutorial/SubEditors/MaterialEditorTutorial.uasset" 2023
-"../../../Engine/Content/Tutorial/SubEditors/ParticleSystemEditorTutorial.uasset" 2024
-"../../../Engine/Content/Tutorial/SubEditors/PersonaAnimBlueprintEditorWalkthrough.uasset" 2025
-"../../../Engine/Content/Tutorial/SubEditors/PersonaAnimEditorWalkthrough.uasset" 2026
-"../../../Engine/Content/Tutorial/SubEditors/PersonaWalkthrough.uasset" 2027
-"../../../Engine/Content/Tutorial/SubEditors/SkeletalMeshEditorWalkthrough.uasset" 2028
-"../../../Engine/Content/Tutorial/SubEditors/SkeletonModeWalkthrough.uasset" 2029
-"../../../Engine/Content/Tutorial/SubEditors/StaticMeshEditorTutorial.uasset" 2030
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialCharacter.uasset" 2031
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_AnimatedNode.uasset" 2032
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_Animation.uasset" 2033
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_SceneNode.uasset" 2034
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_SceneRoot.uasset" 2035
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_SharedNode.uasset" 2036
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_Switch.uasset" 2037
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_Toggle.uasset" 2038
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_VREDAnimatedNode.uasset" 2039
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_VREDAnimation.uasset" 2040
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_VREDAnimNode.uasset" 2041
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/FBXImporterUtils.uasset" 2042
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/Animation/BP_AnimationPlayer.uasset" 2043
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/Animation/ImportedSequencesHelper.uasset" 2044
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/Animation/VREDAnimationPlayer.uasset" 2045
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/Variants/BP_VariantSelector.uasset" 2046
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/Variants/VREDVariantsSelector.uasset" 2047
-"../../Plugins/Enterprise/DatasmithContent/Content/Datasmith/DatasmithActor.uasset" 2048
-"../../Plugins/Enterprise/DatasmithContent/Content/Datasmith/DatasmithAreaLight.uasset" 2049
-"../../Plugins/Enterprise/DatasmithContent/Content/Datasmith/DatasmithArealightMesh.uasset" 2050
-"../../Plugins/Enterprise/DatasmithContent/Content/Datasmith/DatasmithLayer.uasset" 2051
-"../../Plugins/Enterprise/DatasmithContent/Content/Datasmith/DatasmithSelector.uasset" 2052
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/EditButtons.uasset" 2053
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ObjectButtons.uasset" 2054
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/UI.uasset" 2055
-"../../../Engine/Content/Sequencer/DefaultBurnIn.uasset" 2056
-"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/UI/AnimationSampleUI.uasset" 2057
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialAnimationBlueprint.uasset" 2058
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_AnimBlueprint.uasset" 2059
-"../../../Engine/Config//BaseEngine.ini" 2060
-"../../../Engine/Config/Unix/UnixEngine.ini" 2061
-"../../../Engine/Config/Linux/LinuxEngine.ini" 2062
-"../../../Engine/Config/LinuxAArch64/LinuxAArch64Engine.ini" 2063
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/TouchInterface.uasset" 2064
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Stick1.uasset" 2065
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Stick2.uasset" 2066
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Blue.uasset" 2067
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/ball.uasset" 2068
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/CurveTrack.uasset" 2069
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Yellow.uasset" 2070
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/curve.uasset" 2071
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/RampTrack.uasset" 2072
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/ramp.uasset" 2073
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/SlideTrack.uasset" 2074
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/slide.uasset" 2075
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/StraightTrack.uasset" 2076
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/straight.uasset" 2077
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Arrow.uasset" 2078
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Arrow_PhysicsAsset.uasset" 2079
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Arrow_Skeleton.uasset" 2080
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Bin.uasset" 2081
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Lift_Sprite.uasset" 2082
-"../../Plugins/2D/Paper2D/Content/TranslucentUnlitSpriteMaterial.uasset" 2083
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/MoveFlat_Sprite.uasset" 2084
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/RotAC_Sprite.uasset" 2085
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/RotC_Sprite.uasset" 2086
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Fixed.uasset" 2087
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ArrowDown.uasset" 2088
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ArrowLeft.uasset" 2089
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ArrowRight.uasset" 2090
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ArrowUP.uasset" 2091
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Bar.uasset" 2092
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Follow.uasset" 2093
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/pLAY.uasset" 2094
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/RotAC.uasset" 2095
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/RotC.uasset" 2096
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/RotPAC.uasset" 2097
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/RotPC.uasset" 2098
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Stop.uasset" 2099
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Target.uasset" 2100
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ZoomIn.uasset" 2101
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ZoomoUT.uasset" 2102
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/7/0/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__2C66C623FDA8DF84F8A47434A8908C8C94B314AD.udd" 2103
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/8/9/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_B6549D0B404E4A66E__7E899639DA08B97943415785748F1AAC5603220C.udd" 2104
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/6/0/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_B6549D0B404E4A66E0DA86B24EB7935__3FBA0C9736485DF33CC809C47444CE722ED02A16.udd" 2105
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/5/3/SKELETALMESH_29B218D50FE444AF8EFC8E4234F5D4E1_8D8DE0AB4DEEA2C5B75DDC93A6F04BE7__9D3140AC2E7BC6927311F48F653DEFF9B98B0513.udd" 2106
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Lift.uasset" 2107
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/5/1/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__360D1CFF97A28E385D3E34321D74F221006EA353.udd" 2108
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/0/8/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_66DD087A49DD18E12__9CA2C5C065F1FD5148AADD228416D10B25CE652C.udd" 2109
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/3/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_66DD087A49DD18E12D07F8990FE2F85__63DC4198065E93B3FAA028C1443C9D02BAFDAA1E.udd" 2110
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/8/4/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__26B46CC0CD017D1C1717193D61D368513E169A86.udd" 2111
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/3/7/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_AA0FBD024A7841612__45FF5320FE096CEB478E819DAD49741767BC5699.udd" 2112
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/7/8/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_AA0FBD024A78416128B42A9E21D36E6__21F7DADB9D8F18D79FEC196D9339E72B461449AB.udd" 2113
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/MoveFlat.uasset" 2114
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/7/8/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__F9124E47D8CAAF4DEE1CBEC6DD31E5C272EF0D33.udd" 2115
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/1/8/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_E6FBF26045E8AFBB5__BBE2599BAB304932AADB39B6135395167B137D51.udd" 2116
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/8/7/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_E6FBF26045E8AFBB59F84CB7076B072__30051ED94F1BFC48E972672A718C79E3D23A780F.udd" 2117
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/7/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_BBF54BE74DAF4B5EF71FC8905ECE920__380661E775AAE3B59C9BD196E8F736FA30CFBC8B.udd" 2118
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/9/1/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_2F80BE834BAF2B406C13359602FE66A__9C3BC8058CF7133F2AE28C2704697CF314F4EE6A.udd" 2119
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/8/6/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_33C0EB5A4D64E39DAF2CE39788E1AC6__2CF9CCD5F8066481FAF26B95089BD2B40B4D7E17.udd" 2120
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/7/2/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_565E5E0A4B6F369D6DCE98941BCC9FC__FDD7A1D897B3D41D91761DFACECA2E3D03E19F61.udd" 2121
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/3/0/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_A8655BF14BFB79CDB8B99EB49ED612C__281AC9D30B3258FC849DF49F5498BE6D14AB3B09.udd" 2122
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/8/7/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_920581A24085E382543D469306AE783__7509611519D0D1F8D47CAC1A8313C38D6F1AE5C8.udd" 2123
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/2/7/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_6A8DCF2C4499A9EBFFF194986D2E0A9__A2092D7E69334B00729CD0868BE565ABA7C83749.udd" 2124
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/4/8/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_DAE8655B444DB0E7281CE2A3981D7E3__13A9F8870614449259F06B92CDC6D5E8A96BE84D.udd" 2125
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/8/6/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_8F6F76454E857C85E2A4BD806F24EFA__BE6079FF434D79F037C6FE2AAB4AF4BE44162254.udd" 2126
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/8/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_13AFE3AC417807313B6EFC9B4192B9B__4F66054D3145B1F9DBF24DC2CF332779D525EB11.udd" 2127
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/4/5/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_2B6272E8497DBC12654AFBA5B38228D__77813F497E0C1074E3DE9B6B8AE4DB0667D3B822.udd" 2128
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/6/6/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_3ED3BDFD4F2598ECD23857BC3A95B0E__48B77A758A4152E87D6E562A96DB66926C9336E3.udd" 2129
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/9/3/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_317FF0C74CA190A4B3C60B8D47092C7__6C794658A626989CD8F5BBFD78FF4FB42246963D.udd" 2130
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/4/4/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_1DC8F959404F5F1EB9F594AEEEA008C__D8990E6EEDCD7278364EFA820BAB384C85D65BA1.udd" 2131
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/6/2/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_BCAC06FA46CC91454F8F518563F50CA__C5C6F4EC71860773F1E663502DF406ED4E0A5B7E.udd" 2132
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/7/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_8EE00990409907B3BE502FA9BEA767D__5F0EA1577B5315D3C8F0E89D3718AC851C07D553.udd" 2133
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/1/5/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_016627BA49498A14F5443FA05BF21EA__AE872F34EC6BE4EFE4DD719BD3752872B75D0C33.udd" 2134
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/7/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_3F18D38C4C2F5862BB6E1486419F48A__5D60B1C9189BAFD057B5F64C986E2C692E44BCC4.udd" 2135
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/8/5/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_141A24E1492684C69411599F60B8FAE__E4230CDF62F7D51F74D556019240D8342691656E.udd" 2136
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/6/8/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_56EC4E554EAB8B614AE138915E5B2__7C039ADEABC46610E3DAC08464838D9FA7206F1B.udd" 2137
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/2/2/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_A4ACBB3E48D98695CFEF2486A6B4A__6F0734FF2369019D3A40AE3B04F1AAEABE7EC937.udd" 2138
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/0/9/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_896C94F744347B16D788479C0F79D__9E90D0B09A8E56F345B16F40F0D3A82BA1AE19D1.udd" 2139
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/9/0/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_BDA7E919465FBC2AB86C6CBC247D3__96754BE705E78323E7F4592E8667900D8190CA90.udd" 2140
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/3/3/MATSM_8915F134E11A46E2ACFF4214A7775BDD_PCD3D_SM5_8__BC5N_NOCCBN_NOIRIS_DEV_SL___F8F20F73B436FEBFF568E3769539665F15A5EB3F.udd" 2141
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/8/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_D73EE9B44D9254BD95FFA8A203412__08A0603D3E396DC2F1D0E352652DBAF91FFFA2BE.udd" 2142
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/0/MATSM_8915F134E11A46E2ACFF4214A7775BDD_PCD3D_SM5_8__BC5N_NOCCBN_NOIRIS_DEV_SL___1D2E146D01BAA58835139FBCBE2F0E38C60AB2CB.udd" 2143
-"../../../Engine/Content/Maps/Entry.umap" 2144
-"../../../Engine/Content/Maps/Entry_BuiltData.uasset" 2145
-"../../../Engine/Content/EngineSky/C_Sky_Cloud_Color.uasset" 2146
-"../../../Engine/Content/EngineSky/C_Sky_Horizon_Color.uasset" 2147
-"../../../Engine/Content/EngineSky/C_Sky_Zenith_Color.uasset" 2148
-"../../../Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset" 2149
-"../../../Engine/Content/EngineSky/T_Sky_Blue.uasset" 2150
-"../../../Engine/Content/EngineSky/T_Sky_Clouds_M.uasset" 2151
-"../../../Engine/Content/EngineSky/T_Sky_Stars.uasset" 2152
-"../../../Engine/Content/EngineSky/SM_SkySphere.uasset" 2153
-"../../../Engine/Content/MapTemplates/SM_Template_Map_Floor.uasset" 2154
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/2/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_92905B42498B5FC976A4F9BEC1D31__D8BB7AB42BF1A62EF560303E3D4D05E4355CA93B.udd" 2155
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/7/6/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_BC5918274D57494D2A2528BB78370__324686280F67C82A7C12099D475204D0BAB038EF.udd" 2156
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/2/1/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_92905B42498B5FC976A4F9BEC1D31__27EABEEDB2FA715189D6E4951A760AD5F7E1F2FE.udd" 2157
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/5/2/TEXTURE_564290F8998644E39A2118D5C683187B_G8_1A55BC1B4A5466AB36FFD18FF10BB1EA_0__0628C11454E3B567D22629CA155D8CF1BF86395B.udd" 2158
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/9/3/TEXTURE_564290F8998644E39A2118D5C683187B_DXT1_2A53EDAA45CC8C2949BA5BA76149103A__63420BDF8EF6041026261AEB566F7D700EA2A3EE.udd" 2159
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/4/1/TEXTURE_564290F8998644E39A2118D5C683187B_DXT1_FB48713F46BA2FB21ECD8DBE1DC4A5C1__C22AB9FFE18BC24AC2ADF69CC03F895CAC3CC924.udd" 2160
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/1/1/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_92905B42498B5FC976A4F9BEC1D31__F7C87B05BFBA0CCE349E533951332D177DF206A3.udd" 2161
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/1/2/TEXTURE_564290F8998644E39A2118D5C683187B_G8_A0C922AA4D8E1F2AA867C08525C81D35_0__2F3D13335CD693A97B9C6E00C1850650BDAAB4FD.udd" 2162
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/6/7/TEXTURE_564290F8998644E39A2118D5C683187B_G8_1A55BC1B4A5466AB36FFD18FF10BB1EA_0__36A5FF5D7EDF50DBF498A120367F8289271B0736.udd" 2163
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/6/4/TEXTURE_564290F8998644E39A2118D5C683187B_DXT1_2A53EDAA45CC8C2949BA5BA76149103A__9637B2222111489336ACA71CE2E990A7B6CD4942.udd" 2164
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/4/0/TEXTURE_564290F8998644E39A2118D5C683187B_DXT1_2A53EDAA45CC8C2949BA5BA76149103A__4E86F650EE0FA319DE364DB69FFEA0A60FAD7D36.udd" 2165
-"../../../Engine/Content/EditorResources/EmptyActor.uasset" 2166
-"../../../Engine/Content/EditorResources/LightIcons/S_LightError.uasset" 2167
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/2/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_949ECE8847E7123A1D759B8725AEDAB__E33284D3CAAF9ED18546D6CA65A21E1BE08A4773.udd" 2168
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 2169
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 2170
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/6/1/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_C5C372264242EC16DACE4E808153680__2CE6C3CE04D3596606EDE64C9C2BA6F9CAD4F2B2.udd" 2171
-"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 2172
-"../../../Engine/Content/EditorResources/BSPVertex.uasset" 2173
-"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset" 2174
-"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset" 2175
-"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 2176
-"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 2177
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 2178
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 2179
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 2180
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad.uasset" 2181
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButtonFire.uasset" 2182
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton3.uasset" 2183
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_on.uasset" 2184
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_off.uasset" 2185
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_on.uasset" 2186
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_off.uasset" 2187
-"../../../Engine/Content/MobileResources/HUD/LeftVirtualJoystickOnly.uasset" 2188
-"../../../Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset" 2189
-"../../../Engine/Content/MobileResources/HUD/AnalogHat.uasset" 2190
-"../../../Engine/Content/MobileResources/T_MobileMenu2.uasset" 2191
-"../../../Engine/Content/MobileResources/T_MobileControls_texture.uasset" 2192
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Move.uasset" 2193
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/8/8/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_026F801941AE8FEA337DFCA2B570C98__63AB055A16DA7FF3B6CBAFF7FAC2EF389B385644.udd" 2194
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/5.uasset" 2195
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/6/9/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__48C0CEDECF06B9FA1F43F0928904E9CEDE603439.udd" 2196
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/9/0/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_930E7ADE42A2510F9__882636D3E418A46F51ED4283D2B9E0BE986A26CA.udd" 2197
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/9/6/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_930E7ADE42A2510F9F982AA34AF2827__B71A7047D203A9FB3E36515EF1FD7251B37F1060.udd" 2198
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/4.uasset" 2199
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/5/7/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__DDA58B951A028422F6CAF45AA0CC8C3EC5E7A93D.udd" 2200
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/3/0/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_F68F5333489334FEA__E6F4CAB45BA6E3787E7D6935521A93DFD55B532E.udd" 2201
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/9/5/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_F68F5333489334FEA796FD94C17340B__558C412834AEA12BB83394137028A2E38111D1CD.udd" 2202
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/3.uasset" 2203
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/1/4/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__090A22984937B234122CA941D82E1A1C132CFA97.udd" 2204
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/5/0/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_4AA6B846448B694FA__195C424C1DAE8914A873B705E371BCC757435ABD.udd" 2205
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/1/4/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_4AA6B846448B694FA9A0D49902D06DC__5D69CC41327CDB055334DE1EBA11225BE24FB12C.udd" 2206
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/2.uasset" 2207
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/3/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__AE41D04947A08232A0712FC0547966103F308564.udd" 2208
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/1/3/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_A7A48EE4483D9F6A0__08FD06F94BDBB7D86F45BFAE9AA81A1BD6EC4246.udd" 2209
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/8/7/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_A7A48EE4483D9F6A01A9789F516E973__3D5532F07724156465B5D08BA1EBC7AD0E9A303C.udd" 2210
-"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/1.uasset" 2211
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/1/2/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__21503D356BEB481524D9250E5942598E1DCAA66A.udd" 2212
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/0/5/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_394883EF4F64EF5B1__714BD2F2E57348F4F41A19B45BDB84AE7D7F6BB7.udd" 2213
-"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/9/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_394883EF4F64EF5B18E1C0B6FA9D31C__8DDAF2345DEF1B97CDFC833B42780374527F64BA.udd" 2214
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/AlternatorTrack.uasset" 1959
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Ball.uasset" 1960
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Funnel.uasset" 1961
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/MainScene.umap" 1962
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/MainScene_BuiltData.uasset" 1963
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Player.uasset" 1964
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/TrackScrew.uasset" 1965
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/TrackSeesaw.uasset" 1966
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/Alternator2_Seesaw_MESH_01.uasset" 1967
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/Alternator2_Seesaw_Stand_MESH_01.uasset" 1968
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/Alternator2_Seesaw_Track_MESH_01.uasset" 1969
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/Alternator_Seesaw_MESH_01.uasset" 1970
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/Alternator_Seesaw_Stand_MESH_01.uasset" 1971
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/Alternator_S_Track_MESH_01.uasset" 1972
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/Basic_Funnel_Pub_01.uasset" 1973
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/Holder.uasset" 1974
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/Science_Screw_Pub_01.uasset" 1975
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/ScrewHelix.uasset" 1976
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/Screw_Helix.uasset" 1977
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/Screw_ScrewTrack.uasset" 1978
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/SEESAW.uasset" 1979
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/Funnel.uasset" 1980
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/Screw.uasset" 1981
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/SeeSaw.uasset" 1982
+"../../../Engine/Content/EditorResources/SequenceRecorder/Countdown.uasset" 1983
+"../../../Engine/Content/EditorResources/SequenceRecorder/RecordingIndicator.uasset" 1984
+"../../../Engine/Content/BasicShapes/Cube.uasset" 1985
+"../../../Engine/Content/BasicShapes/Sphere.uasset" 1986
+"../../../Engine/Content/BasicShapes/Cylinder.uasset" 1987
+"../../../Engine/Content/BasicShapes/Cone.uasset" 1988
+"../../../Engine/Content/BasicShapes/Plane.uasset" 1989
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Intermediate/AssetRegistryCache/80733c15.bin" 1990
+"../../../Engine/Content/Maps/Templates/TimeOfDay_Default.umap" 1991
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/GoldburgGMB.uasset" 1992
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/MachineObjectTemp.uasset" 1993
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/TrackCurve.uasset" 1994
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/TrackrAMP.uasset" 1995
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/TrackSlide.uasset" 1996
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/TrackStraight.uasset" 1997
+"../../../Engine/Content/ArtTools/RenderToTexture/Blueprints/RenderToTexture_Game.uasset" 1998
+"../../../Engine/Content/ArtTools/RenderToTexture/Blueprints/RenderToTexture_LevelBP.uasset" 1999
+"../../../Engine/Content/ArtTools/RenderToTexture/Blueprints/RenderToTexture_Pawn.uasset" 2000
+"../../../Engine/Content/ArtTools/RenderToTexture/Macros/RenderToTextureFunctionLibrary.uasset" 2001
+"../../../Engine/Content/ArtTools/RenderToTexture/Macros/RenderToTextureMacros.uasset" 2002
+"../../../Engine/Content/EditorBlueprintResources/ActorMacros.uasset" 2003
+"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 2004
+"../../../Engine/Content/EngineSky/BP_Sky_Sphere.uasset" 2005
+"../../../Engine/Content/FunctionalTesting/Blueprints/AITesting_MoveGoal.uasset" 2006
+"../../../Engine/Content/Sequencer/DefaultBurnInOptions.uasset" 2007
+"../../../Engine/Content/Tutorial/Basics/ContentBrowserOverview.uasset" 2008
+"../../../Engine/Content/Tutorial/Basics/FeaturePacks.uasset" 2009
+"../../../Engine/Content/Tutorial/Basics/ViewportsTutorial.uasset" 2010
+"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintEditorTutorial.uasset" 2011
+"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintInterfacesEditorOverview.uasset" 2012
+"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintMacroLibrariesEditorOverview.uasset" 2013
+"../../../Engine/Content/Tutorial/BlueprintTutorials/ClassBlueprintsEditorOverview.uasset" 2014
+"../../../Engine/Content/Tutorial/BlueprintTutorials/LevelBlueprintEditorOverview.uasset" 2015
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_Class.uasset" 2016
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_Interface.uasset" 2017
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_MacroLib.uasset" 2018
+"../../../Engine/Content/Tutorial/Code/AddingCode.uasset" 2019
+"../../../Engine/Content/Tutorial/Foliage/FoliageWalkThrough.uasset" 2020
+"../../../Engine/Content/Tutorial/Foliage/Foliage_Intro_Tutorial.uasset" 2021
+"../../../Engine/Content/Tutorial/Foliage/Foliage_Settings_Tutorial.uasset" 2022
+"../../../Engine/Content/Tutorial/Foliage/Foliage_Using_The_Tool_Tutorial.uasset" 2023
+"../../../Engine/Content/Tutorial/Installation/InstallingVisualStudioTutorial.uasset" 2024
+"../../../Engine/Content/Tutorial/Installation/InstallingXCodeTutorial.uasset" 2025
+"../../../Engine/Content/Tutorial/InWorldBlueprintEditing/IWBE_Tutorial.uasset" 2026
+"../../../Engine/Content/Tutorial/InWorldBlueprintEditing/IWBE_Tutorial_Part2.uasset" 2027
+"../../../Engine/Content/Tutorial/InWorldBlueprintEditing/IWBE_Tutorial_Part3.uasset" 2028
+"../../../Engine/Content/Tutorial/InWorldBlueprintEditing/TutorialAssets/IWBE_Blutility.uasset" 2029
+"../../../Engine/Content/Tutorial/InWorldBlueprintEditing/TutorialAssets/IWBE_Bridge1.uasset" 2030
+"../../../Engine/Content/Tutorial/InWorldBlueprintEditing/TutorialAssets/IWBE_Bridge2.uasset" 2031
+"../../../Engine/Content/Tutorial/Landscape/LandscapeWalkThrough.uasset" 2032
+"../../../Engine/Content/Tutorial/Landscape/Landscape_Manage_Mode.uasset" 2033
+"../../../Engine/Content/Tutorial/Landscape/Landscape_Painting_Mode.uasset" 2034
+"../../../Engine/Content/Tutorial/Landscape/Landscape_Sculpt_Mode.uasset" 2035
+"../../../Engine/Content/Tutorial/Mobile/CreatingSigningCertAndProvisionTutorial.uasset" 2036
+"../../../Engine/Content/Tutorial/Mobile/InstallingiTunesTutorial.uasset" 2037
+"../../../Engine/Content/Tutorial/Mobile/SettingUpAndroidTutorial.uasset" 2038
+"../../../Engine/Content/Tutorial/Mobile/SettingUpLuminTutorial.uasset" 2039
+"../../../Engine/Content/Tutorial/Paper2D/FlipbookEditorTutorial.uasset" 2040
+"../../../Engine/Content/Tutorial/Paper2D/SpriteEditorTutorial.uasset" 2041
+"../../../Engine/Content/Tutorial/SubEditors/GettingSubstance.uasset" 2042
+"../../../Engine/Content/Tutorial/SubEditors/MaterialEditorTutorial.uasset" 2043
+"../../../Engine/Content/Tutorial/SubEditors/ParticleSystemEditorTutorial.uasset" 2044
+"../../../Engine/Content/Tutorial/SubEditors/PersonaAnimBlueprintEditorWalkthrough.uasset" 2045
+"../../../Engine/Content/Tutorial/SubEditors/PersonaAnimEditorWalkthrough.uasset" 2046
+"../../../Engine/Content/Tutorial/SubEditors/PersonaWalkthrough.uasset" 2047
+"../../../Engine/Content/Tutorial/SubEditors/SkeletalMeshEditorWalkthrough.uasset" 2048
+"../../../Engine/Content/Tutorial/SubEditors/SkeletonModeWalkthrough.uasset" 2049
+"../../../Engine/Content/Tutorial/SubEditors/StaticMeshEditorTutorial.uasset" 2050
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialCharacter.uasset" 2051
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_AnimatedNode.uasset" 2052
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_Animation.uasset" 2053
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_SceneNode.uasset" 2054
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_SceneRoot.uasset" 2055
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_SharedNode.uasset" 2056
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_Switch.uasset" 2057
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_Toggle.uasset" 2058
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_VREDAnimatedNode.uasset" 2059
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_VREDAnimation.uasset" 2060
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/BP_VREDAnimNode.uasset" 2061
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/FBXImporterUtils.uasset" 2062
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/Animation/BP_AnimationPlayer.uasset" 2063
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/Animation/ImportedSequencesHelper.uasset" 2064
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/Animation/VREDAnimationPlayer.uasset" 2065
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/Variants/BP_VariantSelector.uasset" 2066
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/Variants/VREDVariantsSelector.uasset" 2067
+"../../Plugins/Enterprise/DatasmithContent/Content/Datasmith/DatasmithActor.uasset" 2068
+"../../Plugins/Enterprise/DatasmithContent/Content/Datasmith/DatasmithAreaLight.uasset" 2069
+"../../Plugins/Enterprise/DatasmithContent/Content/Datasmith/DatasmithArealightMesh.uasset" 2070
+"../../Plugins/Enterprise/DatasmithContent/Content/Datasmith/DatasmithLayer.uasset" 2071
+"../../Plugins/Enterprise/DatasmithContent/Content/Datasmith/DatasmithSelector.uasset" 2072
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/EditButtons.uasset" 2073
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ObjectButtons.uasset" 2074
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/UI.uasset" 2075
+"../../../Engine/Content/Sequencer/DefaultBurnIn.uasset" 2076
+"../../Plugins/Enterprise/DatasmithContent/Content/Blueprints/FBXImporter/UI/AnimationSampleUI.uasset" 2077
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialAnimationBlueprint.uasset" 2078
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_AnimBlueprint.uasset" 2079
+"../../../Engine/Config//BaseEngine.ini" 2080
+"../../../Engine/Config/Unix/UnixEngine.ini" 2081
+"../../../Engine/Config/Linux/LinuxEngine.ini" 2082
+"../../../Engine/Config/LinuxAArch64/LinuxAArch64Engine.ini" 2083
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/TouchInterface.uasset" 2084
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Stick1.uasset" 2085
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Stick2.uasset" 2086
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Blue.uasset" 2087
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/RampTrack.uasset" 2088
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Yellow.uasset" 2089
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/ball.uasset" 2090
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/CurveTrack.uasset" 2091
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/curve.uasset" 2092
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/ramp.uasset" 2093
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/SlideTrack.uasset" 2094
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/slide.uasset" 2095
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/StraightTrack.uasset" 2096
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/OBJIMG/straight.uasset" 2097
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Arrow.uasset" 2098
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Arrow_PhysicsAsset.uasset" 2099
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/Arrow_Skeleton.uasset" 2100
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Bin.uasset" 2101
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Lift_Sprite.uasset" 2102
+"../../Plugins/2D/Paper2D/Content/TranslucentUnlitSpriteMaterial.uasset" 2103
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/MoveFlat_Sprite.uasset" 2104
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/RotAC_Sprite.uasset" 2105
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/RotC_Sprite.uasset" 2106
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Fixed.uasset" 2107
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ArrowDown.uasset" 2108
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ArrowLeft.uasset" 2109
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ArrowRight.uasset" 2110
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ArrowUP.uasset" 2111
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Bar.uasset" 2112
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Follow.uasset" 2113
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/pLAY.uasset" 2114
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/RotAC.uasset" 2115
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/RotC.uasset" 2116
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/RotPAC.uasset" 2117
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/RotPC.uasset" 2118
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Stop.uasset" 2119
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Target.uasset" 2120
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ZoomIn.uasset" 2121
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/ZoomoUT.uasset" 2122
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/5/8/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__98412F740339C4411FF086212053D0D7A4422777.udd" 2123
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/2/2/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_06FCEEEB4E83D38A8__D68BC5316D48E07275947E1013282FB7C2EB9344.udd" 2124
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/6/5/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_06FCEEEB4E83D38A8C56518885FB5A9__76BA6F01BE53B74B9BED3C4508D6B3327EE7D22E.udd" 2125
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/5/7/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__FEE46800DBDEFA7BF33D1F72CB1D0601B82B46F6.udd" 2126
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/0/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_BFF4F6744500300EF__2CA0393A5A8EC30508450A6802D0F082F0FC8E53.udd" 2127
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/7/0/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__A0EC3D039B5F626F424CA77C1DD3E50119CAA98E.udd" 2128
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/0/3/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_EAA7EA3C401E9042D__770EE814F8FCE00820E247EBF6D46923F832C88E.udd" 2129
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/8/6/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_EAA7EA3C401E9042D257219E6A4D046__0E4AC1357F94FE92F009EE1E36185F76C2D6C963.udd" 2130
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/6/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_BFF4F6744500300EF39076B20E77082__5C11194E47D719C47249066F4A03891EF855C7BD.udd" 2131
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/5/6/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__D5954E3D82C20B2BDC7236EE66FEE17FE18F7CF5.udd" 2132
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/6/4/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_BC64BF8A429315C7A__BE6966980B868F38A95C9562EAD5D669EE95078C.udd" 2133
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/3/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_BC64BF8A429315C7A0B6F2AA986123C__FF764CD3AF129AB7007DEFF48CE9796BF15D7B9D.udd" 2134
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/4/1/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__E03914EB2BAA005DA0642003BB19DDE237452EB6.udd" 2135
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/6/5/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_C77F8E14450878B9A__59FCA6D5B6E53F233646D8DA29ADFC857B021DEE.udd" 2136
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/8/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_C77F8E14450878B9A5F189956C8E65B__9B04D5CDD55CE3D704474EA53380990CEDD46B80.udd" 2137
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/7/4/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__A9EB8DABBA1EA477229AEC40BA671D3E4C3509B1.udd" 2138
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/3/8/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_7F0732144C1924159__F29BEBFC5B49094AA9B933D26112834E0C456C70.udd" 2139
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/3/9/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_7F0732144C1924159F71018F1A82533__5F63F625CF9B736F57FAB1E29E8E4A9108BB2C83.udd" 2140
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/MoveFlat.uasset" 2141
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Lift.uasset" 2142
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/8/4/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__26B46CC0CD017D1C1717193D61D368513E169A86.udd" 2143
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/3/7/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_AA0FBD024A7841612__45FF5320FE096CEB478E819DAD49741767BC5699.udd" 2144
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/7/8/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_AA0FBD024A78416128B42A9E21D36E6__21F7DADB9D8F18D79FEC196D9339E72B461449AB.udd" 2145
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/5/1/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__360D1CFF97A28E385D3E34321D74F221006EA353.udd" 2146
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/0/8/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_66DD087A49DD18E12__9CA2C5C065F1FD5148AADD228416D10B25CE652C.udd" 2147
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/3/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_66DD087A49DD18E12D07F8990FE2F85__63DC4198065E93B3FAA028C1443C9D02BAFDAA1E.udd" 2148
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/5/3/SKELETALMESH_29B218D50FE444AF8EFC8E4234F5D4E1_8D8DE0AB4DEEA2C5B75DDC93A6F04BE7__9D3140AC2E7BC6927311F48F653DEFF9B98B0513.udd" 2149
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/7/8/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__F9124E47D8CAAF4DEE1CBEC6DD31E5C272EF0D33.udd" 2150
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/1/8/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_E6FBF26045E8AFBB5__BBE2599BAB304932AADB39B6135395167B137D51.udd" 2151
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/7/0/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__2C66C623FDA8DF84F8A47434A8908C8C94B314AD.udd" 2152
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/8/9/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_B6549D0B404E4A66E__7E899639DA08B97943415785748F1AAC5603220C.udd" 2153
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/6/0/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_B6549D0B404E4A66E0DA86B24EB7935__3FBA0C9736485DF33CC809C47444CE722ED02A16.udd" 2154
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/8/7/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_E6FBF26045E8AFBB59F84CB7076B072__30051ED94F1BFC48E972672A718C79E3D23A780F.udd" 2155
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/6/6/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_3ED3BDFD4F2598ECD23857BC3A95B0E__48B77A758A4152E87D6E562A96DB66926C9336E3.udd" 2156
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/9/3/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_317FF0C74CA190A4B3C60B8D47092C7__6C794658A626989CD8F5BBFD78FF4FB42246963D.udd" 2157
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/4/4/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_1DC8F959404F5F1EB9F594AEEEA008C__D8990E6EEDCD7278364EFA820BAB384C85D65BA1.udd" 2158
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/6/2/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_BCAC06FA46CC91454F8F518563F50CA__C5C6F4EC71860773F1E663502DF406ED4E0A5B7E.udd" 2159
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/7/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_8EE00990409907B3BE502FA9BEA767D__5F0EA1577B5315D3C8F0E89D3718AC851C07D553.udd" 2160
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/1/5/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_016627BA49498A14F5443FA05BF21EA__AE872F34EC6BE4EFE4DD719BD3752872B75D0C33.udd" 2161
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/7/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_3F18D38C4C2F5862BB6E1486419F48A__5D60B1C9189BAFD057B5F64C986E2C692E44BCC4.udd" 2162
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/8/5/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_141A24E1492684C69411599F60B8FAE__E4230CDF62F7D51F74D556019240D8342691656E.udd" 2163
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/6/8/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_56EC4E554EAB8B614AE138915E5B2__7C039ADEABC46610E3DAC08464838D9FA7206F1B.udd" 2164
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/2/2/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_A4ACBB3E48D98695CFEF2486A6B4A__6F0734FF2369019D3A40AE3B04F1AAEABE7EC937.udd" 2165
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/4/7/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_7D466E8B4FC114403BC26DA802C17__F49E097873090185C39DDA0FC5493C958F9B55B3.udd" 2166
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/0/4/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_9A58FE754EA55E362A9D18915AFE2__2F5614854589D4ED6D7FE784AED582097EC26A4A.udd" 2167
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/0/9/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_896C94F744347B16D788479C0F79D__9E90D0B09A8E56F345B16F40F0D3A82BA1AE19D1.udd" 2168
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/9/0/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_BDA7E919465FBC2AB86C6CBC247D3__96754BE705E78323E7F4592E8667900D8190CA90.udd" 2169
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/8/0/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_EC7B44A64C5E4F74EEA9DC9EA023A__06FCCBBD798CC468569C3708ED93C6C4F6478293.udd" 2170
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/8/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_D73EE9B44D9254BD95FFA8A203412__08A0603D3E396DC2F1D0E352652DBAF91FFFA2BE.udd" 2171
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/3/3/MATSM_8915F134E11A46E2ACFF4214A7775BDD_PCD3D_SM5_8__BC5N_NOCCBN_NOIRIS_DEV_SL___F8F20F73B436FEBFF568E3769539665F15A5EB3F.udd" 2172
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/0/MATSM_8915F134E11A46E2ACFF4214A7775BDD_PCD3D_SM5_8__BC5N_NOCCBN_NOIRIS_DEV_SL___1D2E146D01BAA58835139FBCBE2F0E38C60AB2CB.udd" 2173
+"../../../Engine/Content/Maps/Entry.umap" 2174
+"../../../Engine/Content/Maps/Entry_BuiltData.uasset" 2175
+"../../../Engine/Content/EngineSky/C_Sky_Cloud_Color.uasset" 2176
+"../../../Engine/Content/EngineSky/C_Sky_Horizon_Color.uasset" 2177
+"../../../Engine/Content/EngineSky/C_Sky_Zenith_Color.uasset" 2178
+"../../../Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset" 2179
+"../../../Engine/Content/EngineSky/T_Sky_Blue.uasset" 2180
+"../../../Engine/Content/EngineSky/T_Sky_Clouds_M.uasset" 2181
+"../../../Engine/Content/EngineSky/T_Sky_Stars.uasset" 2182
+"../../../Engine/Content/EngineSky/SM_SkySphere.uasset" 2183
+"../../../Engine/Content/MapTemplates/SM_Template_Map_Floor.uasset" 2184
+"../../../Engine/Content/EditorResources/EmptyActor.uasset" 2185
+"../../../Engine/Content/EditorResources/LightIcons/S_LightError.uasset" 2186
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/2/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_92905B42498B5FC976A4F9BEC1D31__D8BB7AB42BF1A62EF560303E3D4D05E4355CA93B.udd" 2187
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/7/6/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_BC5918274D57494D2A2528BB78370__324686280F67C82A7C12099D475204D0BAB038EF.udd" 2188
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/2/1/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_92905B42498B5FC976A4F9BEC1D31__27EABEEDB2FA715189D6E4951A760AD5F7E1F2FE.udd" 2189
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/1/1/TEXTURE_564290F8998644E39A2118D5C683187B_AUTODXT_92905B42498B5FC976A4F9BEC1D31__F7C87B05BFBA0CCE349E533951332D177DF206A3.udd" 2190
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/9/3/TEXTURE_564290F8998644E39A2118D5C683187B_DXT1_2A53EDAA45CC8C2949BA5BA76149103A__63420BDF8EF6041026261AEB566F7D700EA2A3EE.udd" 2191
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/4/1/TEXTURE_564290F8998644E39A2118D5C683187B_DXT1_FB48713F46BA2FB21ECD8DBE1DC4A5C1__C22AB9FFE18BC24AC2ADF69CC03F895CAC3CC924.udd" 2192
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/5/2/TEXTURE_564290F8998644E39A2118D5C683187B_G8_1A55BC1B4A5466AB36FFD18FF10BB1EA_0__0628C11454E3B567D22629CA155D8CF1BF86395B.udd" 2193
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/1/2/TEXTURE_564290F8998644E39A2118D5C683187B_G8_A0C922AA4D8E1F2AA867C08525C81D35_0__2F3D13335CD693A97B9C6E00C1850650BDAAB4FD.udd" 2194
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/4/0/TEXTURE_564290F8998644E39A2118D5C683187B_DXT1_2A53EDAA45CC8C2949BA5BA76149103A__4E86F650EE0FA319DE364DB69FFEA0A60FAD7D36.udd" 2195
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/6/4/TEXTURE_564290F8998644E39A2118D5C683187B_DXT1_2A53EDAA45CC8C2949BA5BA76149103A__9637B2222111489336ACA71CE2E990A7B6CD4942.udd" 2196
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/6/7/TEXTURE_564290F8998644E39A2118D5C683187B_G8_1A55BC1B4A5466AB36FFD18FF10BB1EA_0__36A5FF5D7EDF50DBF498A120367F8289271B0736.udd" 2197
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/4/5/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_2B6272E8497DBC12654AFBA5B38228D__77813F497E0C1074E3DE9B6B8AE4DB0667D3B822.udd" 2198
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/2/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_949ECE8847E7123A1D759B8725AEDAB__E33284D3CAAF9ED18546D6CA65A21E1BE08A4773.udd" 2199
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 2200
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 2201
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/6/1/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_C5C372264242EC16DACE4E808153680__2CE6C3CE04D3596606EDE64C9C2BA6F9CAD4F2B2.udd" 2202
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/8/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_13AFE3AC417807313B6EFC9B4192B9B__4F66054D3145B1F9DBF24DC2CF332779D525EB11.udd" 2203
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/8/6/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_8F6F76454E857C85E2A4BD806F24EFA__BE6079FF434D79F037C6FE2AAB4AF4BE44162254.udd" 2204
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/4/8/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_DAE8655B444DB0E7281CE2A3981D7E3__13A9F8870614449259F06B92CDC6D5E8A96BE84D.udd" 2205
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/2/7/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_6A8DCF2C4499A9EBFFF194986D2E0A9__A2092D7E69334B00729CD0868BE565ABA7C83749.udd" 2206
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/8/7/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_920581A24085E382543D469306AE783__7509611519D0D1F8D47CAC1A8313C38D6F1AE5C8.udd" 2207
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/3/0/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_A8655BF14BFB79CDB8B99EB49ED612C__281AC9D30B3258FC849DF49F5498BE6D14AB3B09.udd" 2208
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/7/2/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_565E5E0A4B6F369D6DCE98941BCC9FC__FDD7A1D897B3D41D91761DFACECA2E3D03E19F61.udd" 2209
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/8/6/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_33C0EB5A4D64E39DAF2CE39788E1AC6__2CF9CCD5F8066481FAF26B95089BD2B40B4D7E17.udd" 2210
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/7/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_BBF54BE74DAF4B5EF71FC8905ECE920__380661E775AAE3B59C9BD196E8F736FA30CFBC8B.udd" 2211
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/9/1/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_2F80BE834BAF2B406C13359602FE66A__9C3BC8058CF7133F2AE28C2704697CF314F4EE6A.udd" 2212
+"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 2213
+"../../../Engine/Content/EditorResources/BSPVertex.uasset" 2214
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset" 2215
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset" 2216
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 2217
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 2218
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 2219
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 2220
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 2221
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad.uasset" 2222
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButtonFire.uasset" 2223
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton3.uasset" 2224
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_on.uasset" 2225
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_off.uasset" 2226
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_on.uasset" 2227
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_off.uasset" 2228
+"../../../Engine/Content/MobileResources/HUD/LeftVirtualJoystickOnly.uasset" 2229
+"../../../Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset" 2230
+"../../../Engine/Content/MobileResources/HUD/AnalogHat.uasset" 2231
+"../../../Engine/Content/MobileResources/T_MobileMenu2.uasset" 2232
+"../../../Engine/Content/MobileResources/T_MobileControls_texture.uasset" 2233
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/UI/Move.uasset" 2234
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/8/8/TEXTURE_564290F8998644E39A2118D5C683187B_BGRA8_026F801941AE8FEA337DFCA2B570C98__63AB055A16DA7FF3B6CBAFF7FAC2EF389B385644.udd" 2235
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/5/0/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__2AEE45B54B721477A26A86FA7EBD8CDC2DDEBA31.udd" 2236
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/9/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_2BF73EA04456371EC__57886DB0DB3DC6CC1AF420488A5C8AA522BFFB3C.udd" 2237
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/7/2/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_2BF73EA04456371EC6E6D3B78CE0057__08BDFA5CF84AD2530AC3A776396E1D0EDC4B483F.udd" 2238
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/0/9/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__D44091A345BF63A3EEEA83EB12ACFEE40F8E7667.udd" 2239
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/6/6/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_A9CAFF784C31BA672__68576700DCFC9EB8C3494A18B283F04E05B0450D.udd" 2240
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/1/2/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_A9CAFF784C31BA6721A35CB553425FF__AA125DC3B6A365E8E8B0C0F09471B5C160D875D3.udd" 2241
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/4/8/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__D3CB474CEF6C259FD3E983FA444C5BAEAFAACBCD.udd" 2242
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/8/5/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_B997CF3142258EE6027F5FA990715EB__8A7A40B0AF53D991D5CF1BFDDEA4F1A0A03903B1.udd" 2243
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/1/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__B424E78CDC86F08C1E95B7882CD40B42765BE80F.udd" 2244
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/9/7/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_4F3384004A041E2CF__E0487A35962E1D1228ACD1A311A937051EAFCB43.udd" 2245
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/8/7/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_4F3384004A041E2CF17CC49CB6119D1__26E3EB06A2471F82CB56B912A331B844A8A55C00.udd" 2246
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/3/6/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__58B9BBB7D3AB4050BF4F6648969B0B25677051EC.udd" 2247
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/6/4/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_666EC6E549BE985AB__0057D876BAA90C9520423FE984A53CB30CF8D8F5.udd" 2248
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/9/2/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_666EC6E549BE985ABC0A3D8F0920F23__D7B4F047C1DC947752C5310918A7C5553DC9C136.udd" 2249
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/7/5/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__B22BD45E683FA5C7D834C74F10EE03ED42871A83.udd" 2250
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/9/9/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_01889FD44072926F6__88029C2C19CCBEA9984CDFEC8BB45E413646F63C.udd" 2251
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/0/2/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_01889FD44072926F679B46B55F435EE__C1790A296C63E083B47EFD7B1E93D54F6489C192.udd" 2252
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/8/5/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__427A4A23CCBB24A6D1F35374724792EC03E922F2.udd" 2253
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/4/2/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_F097B0D6449801177251A5B8ADF85C0__D0E4FF8C4D4B7C50A75C5CB75A6AF48A5434A27D.udd" 2254
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/5.uasset" 2255
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/6/9/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__48C0CEDECF06B9FA1F43F0928904E9CEDE603439.udd" 2256
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/9/0/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_930E7ADE42A2510F9__882636D3E418A46F51ED4283D2B9E0BE986A26CA.udd" 2257
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/9/6/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_930E7ADE42A2510F9F982AA34AF2827__B71A7047D203A9FB3E36515EF1FD7251B37F1060.udd" 2258
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/4.uasset" 2259
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/5/7/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__DDA58B951A028422F6CAF45AA0CC8C3EC5E7A93D.udd" 2260
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/3/0/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_F68F5333489334FEA__E6F4CAB45BA6E3787E7D6935521A93DFD55B532E.udd" 2261
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/9/5/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_F68F5333489334FEA796FD94C17340B__558C412834AEA12BB83394137028A2E38111D1CD.udd" 2262
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/3.uasset" 2263
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/1/4/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__090A22984937B234122CA941D82E1A1C132CFA97.udd" 2264
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/5/0/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_4AA6B846448B694FA__195C424C1DAE8914A873B705E371BCC757435ABD.udd" 2265
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/1/4/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_4AA6B846448B694FA9A0D49902D06DC__5D69CC41327CDB055334DE1EBA11225BE24FB12C.udd" 2266
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/2.uasset" 2267
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/3/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__AE41D04947A08232A0712FC0547966103F308564.udd" 2268
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/1/3/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_A7A48EE4483D9F6A0__08FD06F94BDBB7D86F45BFAE9AA81A1BD6EC4246.udd" 2269
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/8/7/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_A7A48EE4483D9F6A01A9789F516E973__3D5532F07724156465B5D08BA1EBC7AD0E9A303C.udd" 2270
+"../../../../../../AGwynne/Documents/Unreal Projects/Rube-Goldburg/Content/track/1.uasset" 2271
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/1/2/STATICMESH_A9B55814188440DA96CF4A9D318BC1C5_228332BAE0224DD294E232B87D83948FQU__21503D356BEB481524D9250E5942598E1DCAA66A.udd" 2272
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/0/5/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_394883EF4F64EF5B1__714BD2F2E57348F4F41A19B45BDB84AE7D7F6BB7.udd" 2273
+"C:/Users/AGwynne/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/9/PHYSX_A08609EF508D460CBB6710540B03AACF_PHYSXPC_394883EF4F64EF5B18E1C0B6FA9D31C__8DDAF2345DEF1B97CDFC833B42780374527F64BA.udd" 2274

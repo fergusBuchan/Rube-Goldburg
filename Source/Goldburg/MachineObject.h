@@ -32,17 +32,23 @@ public:
 	void Move(FVector);
 	void Rotate(bool);
 	void Lift(float);
-	void Activate();
-	void Reset();
+	virtual void Activate();
+	virtual void  Reset();
 	void Spawn();
 
 	UPROPERTY(EditAnywhere)
 		bool Active;
+	UPROPERTY(EditAnywhere)
+		bool Tracking;
 	UPROPERTY(BlueprintReadOnly, EditAnywhere)
 		float MinHeight;
 	UPROPERTY(EditAnywhere)
+	float height;
+	UPROPERTY(EditAnywhere)
 		UTexture2D* OBJIMG;
+
 	
+
 	float heightDelta;
 	FVector LastValidPos;
 	FVector center;

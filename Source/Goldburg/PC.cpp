@@ -153,7 +153,7 @@ void APC::Tick(float DeltaTime)
 		{
 			LiftIMG->SetVisibility(true);
 		}
-		LiftIMG->SetWorldLocation(FVector(SelectedPos.X, SelectedPos.Y, SelectedPos.Z + 60));
+		LiftIMG->SetWorldLocation(FVector(SelectedPos.X, SelectedPos.Y, SelectedPos.Z + SelectedObject->height));
 		FVector diff = Camera->GetComponentLocation() - SelectedPos;
 		diff *= FVector(1.0, 1.0, 0.0);
 		diff.Normalize();
@@ -180,7 +180,14 @@ void APC::Tick(float DeltaTime)
 			{
 				if (ActiveObjects[tracked] != NULL)
 				{
-					SetActorLocation(ActiveObjects[tracked]->Mesh->GetComponentLocation());
+					if (ActiveObjects[tracked]->Tracking)
+					{
+						SetActorLocation(ActiveObjects[tracked]->Mesh->GetComponentLocation());
+					}
+					else
+					{
+						nextTarget();
+					}
 				}
 			}
 			else
@@ -449,7 +456,7 @@ void APC::Spawn(int index)
 			SelectedObject->Move(hit->Location);
 		}
 		SelectedObject->Spawn();
-		if (SelectedObject->Active)
+		if (SelectedObject->Active == true)
 		{
 			ActiveObjects.Add(SelectedObject);
 		}

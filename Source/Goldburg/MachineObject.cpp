@@ -26,15 +26,13 @@ AMachineObject::AMachineObject()
 	//Set Mesh Collision
 	Mesh->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel3, ECollisionResponse::ECR_Block);
 
-	
-
+	height = 60;
 }
 
 // Called when the game starts or when spawned
 void AMachineObject::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
