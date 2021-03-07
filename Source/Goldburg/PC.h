@@ -184,6 +184,4 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	bool following;
 	int tracked;
-
-	
 };
