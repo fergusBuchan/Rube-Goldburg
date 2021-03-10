@@ -32,10 +32,11 @@ public:
 	void Move(FVector);
 	void Rotate(bool);
 	void Lift(float);
+	virtual void Launch();
 	virtual void Activate();
 	virtual void  Reset();
-	void Spawn();
-
+	virtual void Spawn();
+	bool launched;
 	UPROPERTY(EditAnywhere)
 		bool Active;
 	UPROPERTY(EditAnywhere)
@@ -47,9 +48,24 @@ public:
 	UPROPERTY(EditAnywhere)
 		UTexture2D* OBJIMG;
 
-	
+	UPROPERTY(EditAnywhere)
+		FVector Offset;
 
 	float heightDelta;
 	FVector LastValidPos;
-	FVector center;
+	FVector position;
+
+	UPROPERTY(EditAnywhere)
+		FVector ResetPosition;
+	UPROPERTY(EditAnywhere)
+		FRotator ResetRotation;
+
+	UPROPERTY(EditAnywhere)
+		float MassScale = 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+		int TabNum;
+
+	bool linked;
+	int linkChannel = 0;
 };

@@ -64,7 +64,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void SetHeight(float newHeight);
 	
-	
+	UFUNCTION(BlueprintCallable)
+		float GetHeight();
 	
 	
 
@@ -133,7 +134,11 @@ public:
 		UTexture2D* DefaultIMG;
 	UFUNCTION(BlueprintCallable)
 		UTexture2D* getImg(int Index);
-	
+
+	UFUNCTION(BlueprintCallable)
+		int getObjectChannel();
+	UFUNCTION(BlueprintCallable)
+		void setObjectChannel(int Channel);
 	
 	
 	
@@ -151,6 +156,8 @@ public:
 	//Array of pointers to objects to be activated on play
 	UPROPERTY(EditAnywhere, Transient)
 		TArray<class AMachineObject*> ActiveObjects;
+	UPROPERTY(EditAnywhere, Transient)
+		TArray<class ATriggerButton*> Buttons;
 	//Array of pointers to static objects in the scene
 	UPROPERTY(EditAnywhere, Transient)
 		TArray<class AMachineObject*> StaticObjects;
