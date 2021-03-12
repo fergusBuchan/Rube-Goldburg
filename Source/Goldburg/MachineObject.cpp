@@ -33,13 +33,15 @@ AMachineObject::AMachineObject()
 void AMachineObject::BeginPlay()
 {
 	Super::BeginPlay();
+	Mesh->SetAllMassScale(MassScale);
 }
 
 // Called every frame
 void AMachineObject::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	center = GetActorLocation();
+
+	position = GetActorLocation();
 }
 
 void AMachineObject::Select(bool select)
@@ -136,11 +138,19 @@ void AMachineObject::Lift(float delta)
 	}
 	LastValidPos = GetActorLocation();
 }
+void AMachineObject::Launch()
+{
+	Mesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+		Mesh->SetSimulatePhysics(true);
+}
 //Activate object when scene is played (to be swapped for virtual function for children)
 void AMachineObject::Activate()
 {
-		Mesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
-		Mesh->SetSimulatePhysics(true);
+	if (!linked)
+	{
+		Launch();
+	}
+		
 }
 //Reset object when play stops (to be swapped for virtual function for children)
 void AMachineObject::Reset()
@@ -148,6 +158,7 @@ void AMachineObject::Reset()
 		Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		Mesh->SetSimulatePhysics(false);
 		Mesh->AttachToComponent(RootComponent, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+		Mesh->SetRelativeLocationAndRotation(ResetPosition, ResetRotation);
 }
 //Spawn object
 void AMachineObject::Spawn()
@@ -156,7 +167,7 @@ void AMachineObject::Spawn()
 	//Object then snaps to finger at next tick, or when finget drags from button to floor
 	//space outside of scene
 	SetActorLocation(FVector(-1000000, -10000000000, -10000));
-	LastValidPos = GetActorLocation();
+	LastValidPos = FVector(-1000000, -10000000000, -10000);
 }
 
 

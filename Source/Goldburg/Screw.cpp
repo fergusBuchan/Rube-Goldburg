@@ -9,7 +9,7 @@
 void AScrew::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	center = GetActorLocation();
+	position = GetActorLocation();
 	
 	if (running)
 	{
