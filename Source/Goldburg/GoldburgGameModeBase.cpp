@@ -9,13 +9,34 @@
 void AGoldburgGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
-	APC* player = Cast<APC>(UGameplayStatics::GetPlayerPawn(this, 0));
-	onScreen = CreateWidget<UUserWidget>(GetWorld(), PlayerHUDClass);
-	onScreen->AddToViewport();
+	
+	MenuHUDPointer = CreateWidget<UUserWidget>(GetWorld(), MenuHUDClass);
+	PlayerHUDPointer = CreateWidget<UUserWidget>(GetWorld(), PlayerHUDClass);
+	MenuHUDPointer->AddToViewport();
+
 	if (PlayerHUDClass != nullptr)
 	{
-		if (onScreen != nullptr)
-		{	
+		if (MenuHUDPointer != nullptr)
+		{
 		}
 	}
+
+}
+
+void AGoldburgGameModeBase::newGame() {
+
+	
+	MenuHUDPointer->RemoveFromViewport();
+	PlayerHUDPointer->AddToViewport();
+
+	if (PlayerHUDClass != nullptr)
+	{
+
+		if (PlayerHUDPointer != nullptr)
+		{
+
+		}
+	}
+
+	APC* player = Cast<APC>(UGameplayStatics::GetPlayerPawn(this, 0));
 }
