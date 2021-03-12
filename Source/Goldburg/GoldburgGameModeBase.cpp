@@ -14,10 +14,8 @@ void AGoldburgGameModeBase::BeginPlay()
 	onScreen->AddToViewport();
 	if (PlayerHUDClass != nullptr)
 	{
-		
 		if (onScreen != nullptr)
-		{
-			
+		{	
 		}
 	}
 }

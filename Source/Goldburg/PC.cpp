@@ -15,7 +15,8 @@
 #include "DrawDebugHelpers.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Styling/SlateBrush.h"
-
+#include "TriggerButton.h"
+#include "Mover.h"
 // Sets default values
 APC::APC()
 {
@@ -142,7 +143,7 @@ void APC::Tick(float DeltaTime)
 	}
 	if (SelectedObject != NULL)
 	{
-		SelectedPos = SelectedObject->center;
+		SelectedPos = SelectedObject->position;
 		MoveIMG->SetVisibility(true);
 		MoveIMG->SetWorldLocation(FVector(SelectedPos.X, SelectedPos.Y, 21));//21 is just above current floor height
 		if (GetControlRotation().Pitch < 285 && GetControlRotation().Pitch > 255)
@@ -293,7 +294,7 @@ void APC::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 			if (SelectedObject != NULL)
 			{
 				SelectedObject->Select(true);
-				SelectedPos = SelectedObject->center;
+				SelectedPos = SelectedObject->position;
 				objSelected = true;
 				Selected = true;
 			}
@@ -319,6 +320,11 @@ void APC::MouseY(float value)
 void APC::SetHeight(float newHeight)
 {
 	SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y,newHeight));
+}
+
+float APC::GetHeight()
+{
+	return GetActorLocation().Z;
 }
 
 //Toggle fixed camera
@@ -418,7 +424,7 @@ UTexture2D* APC::getImg(int Index)
 	AMachineObject* a = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[Index]));
 	if (a == NULL)
 	{
-		a->Destroy();
+		//a->Destroy();
 		return DefaultIMG;
 	}
 	else
@@ -426,6 +432,27 @@ UTexture2D* APC::getImg(int Index)
 		UTexture2D* tempTex = a->OBJIMG;
 		a->Destroy();
 		return tempTex;
+	}
+}
+
+int APC::getObjectChannel()
+{
+	return SelectedObject->linkChannel;
+}
+
+void APC::setObjectChannel(int Channel)
+{
+	if (SelectedObject != NULL)
+	{
+		SelectedObject->linkChannel = Channel;
+		if (Channel == 0)
+		{
+			SelectedObject->linked = false;
+		}
+		else
+		{
+			SelectedObject->linked = true;
+		}
 	}
 }
 
@@ -445,7 +472,7 @@ void APC::Spawn(int index)
 	if (SelectedObject != NULL)
 	{
 		SelectedObject->Select(true);
-		SelectedPos = SelectedObject->center;
+		SelectedPos = SelectedObject->position;
 		objSelected = true;
 		Selected = true;
 		moving = true;
@@ -458,7 +485,15 @@ void APC::Spawn(int index)
 		SelectedObject->Spawn();
 		if (SelectedObject->Active == true)
 		{
-			ActiveObjects.Add(SelectedObject);
+			ATriggerButton* temp = Cast<ATriggerButton>(SelectedObject);
+			if (temp != NULL)
+			{
+				Buttons.Add(temp);
+			}
+			else
+			{
+				ActiveObjects.Add(SelectedObject);
+			}
 		}
 		else
 		{
@@ -498,6 +533,13 @@ void APC::DeleteObject()
 				ActiveObjects.RemoveAt(i,1,true);
 			}
 		}
+		for (int i = 0; i < Buttons.Num(); i++)
+		{
+			if (SelectedObject == Buttons[i])
+			{
+				Buttons.RemoveAt(i, 1, true);
+			}
+		}
 		for (int i = 0; i < StaticObjects.Num(); i++)
 		{
 			if (SelectedObject == StaticObjects[i])
@@ -506,11 +548,15 @@ void APC::DeleteObject()
 			}
 		}
 		//Delete object
+		AMover* temp = Cast<AMover>(SelectedObject);
+		if (temp != NULL)
+		{
+			temp->DestroyVehicle();
+		}
 		SelectedObject->Destroy();
 		SelectedObject = NULL;
 		objSelected = false;
 		Selected = false;
-		
 	}
 }
 
@@ -542,12 +588,46 @@ void APC::ClearScene()
 //Begin play mode
 void APC::Play()
 {
+	for (int i = 0; i < Buttons.Num(); i++)
+	{
+		if (Buttons[i] != NULL)
+		{
+			if (Buttons[i]->GetActorLocation().Y < -10000)
+			{
+				Buttons[i]->Destroy();
+				Buttons.RemoveAt(i, 1, true);
+			}
+			else
+			{
+				Buttons[i]->Activate();
+				if (Buttons[i]->linked)
+				{
+					Buttons[i]->ControlledObjects.Empty();
+					for (int j = 0; j < ActiveObjects.Num(); j++)
+					{
+						if (ActiveObjects[j]->linkChannel == Buttons[i]->linkChannel)
+						{
+							Buttons[i]->ControlledObjects.Add(ActiveObjects[j]);
+						}
+					}
+				}
+			}
+		}
+	}
 	//Activate all non static objects
 	for (int i = 0; i < ActiveObjects.Num(); i++)
 	{
 		if (ActiveObjects[i] != NULL)
 		{
-			ActiveObjects[i]->Activate();
+			if (ActiveObjects[i]->GetActorLocation().Y < -10000)
+			{
+				ActiveObjects[i]->Destroy();
+				ActiveObjects.RemoveAt(i, 1, true);
+			}
+			else
+			{
+				ActiveObjects[i]->Activate();
+			}
 		}
 	}
 	//Deselect current object
@@ -566,6 +646,11 @@ void APC::Play()
 //Stop play mode
 void APC::Stop()
 {
+	for (int i = 0; i < Buttons.Num(); i++)
+	{
+		Buttons[i]->Reset();
+	}
+
 	//Reset all active components
 	for (int i = 0; i < ActiveObjects.Num(); i++)
 	{
