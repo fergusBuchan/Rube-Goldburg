@@ -14,8 +14,15 @@ void AGoldburgGameModeBase::BeginPlay()
 	onScreen->AddToViewport();
 	if (PlayerHUDClass != nullptr)
 	{
+<<<<<<< HEAD
 		if (onScreen != nullptr)
 		{	
+=======
+		
+		if (onScreen != nullptr)
+		{
+			
+>>>>>>> parent of d53b90c (menu added)
 		}
 	}
 }
