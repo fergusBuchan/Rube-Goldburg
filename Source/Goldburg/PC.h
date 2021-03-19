@@ -43,6 +43,9 @@ public:
 	
 	APlayerController* controller;
 
+	
+
+
 	/** Handler for when a touch input begins. */
 	void TouchStarted(ETouchIndex::Type FingerIndex, FVector Location);
 	/** Handler for when a touch input stops. */
@@ -94,8 +97,10 @@ public:
 		void DeleteObject();
 
 
+	UPROPERTY(EditAnywhere)
+		float deselectDist;
 
-
+	FVector touchLoc;
 
 	UPROPERTY(EditAnywhere)
 		float Speed;
@@ -171,7 +176,7 @@ public:
 	bool follow;
 	
 	
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadWrite)
 		bool objSelected;
 	    bool Selected;
 

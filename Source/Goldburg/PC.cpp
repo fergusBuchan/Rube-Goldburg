@@ -224,6 +224,10 @@ void APC::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 {
 	if (FingerIndex == ETouchIndex::Touch1)
 	{
+		touchLoc = Location;
+		//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("X %f"), Location.X));
+		//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Y %f"), Location.Y));
+		//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Z %f"), Location.Z));
 		clicked = true;
 		controller->GetInputTouchState(ETouchIndex::Touch1,LastTouch.X,LastTouch.Y,clicked);
 		FHitResult Hit(ForceInit);
@@ -260,6 +264,7 @@ void APC::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 				{
 					RotateAntiClockwise();
 				}
+				touchLoc = FVector(-100,-100,-100);
 			}
 			else if (controller->GetHitResultUnderFinger(ETouchIndex::Touch1, ECollisionChannel::ECC_GameTraceChannel3, false, Hit))
 			{
@@ -300,7 +305,23 @@ void APC::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 			}
 		}
 	}
+	else
+	{
+		if (FVector::Dist(touchLoc, Location) < deselectDist)
+		{
+			//Deselect current object
+			if (SelectedObject != NULL)
+			{
+				SelectedObject->Select(false);
+				SelectedObject = NULL;
+				objSelected = false;
+				Selected = false;
+			}
+		}
+	}
 	SelectedTemp = nullptr;SelectedTemp2 = nullptr;
+	//if not moved
+	
 }
 
 
