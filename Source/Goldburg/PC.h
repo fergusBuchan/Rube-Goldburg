@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "ObjectSave.h"
+#include "WorldSave.h"
 #include "GameFramework/Character.h"
 #include "PC.generated.h"
 
@@ -139,14 +141,15 @@ public:
 		UTexture2D* DefaultIMG;
 	UFUNCTION(BlueprintCallable)
 		UTexture2D* getImg(int Index);
+		void Spawn(UObjectSave* inputObject);
 
 	UFUNCTION(BlueprintCallable)
 		int getObjectChannel();
 	UFUNCTION(BlueprintCallable)
 		void setObjectChannel(int Channel);
 	
-	
-	
+	UPROPERTY(BlueprintReadWrite)
+		bool pickerOpen;
 	
 
 	
@@ -197,5 +200,20 @@ public:
 	bool following;
 	int tracked;
 
+
+	UPROPERTY(BlueprintReadWrite)
+		TArray<class UWorldSave*> SaveGames;
+	UPROPERTY(BlueprintReadWrite)
+		int currentSave;
+
+	UFUNCTION(BlueprintCallable)
+		void Load(int index);
+	UFUNCTION(BlueprintCallable)
+		void Save();
+	UFUNCTION(BlueprintCallable)
+		void NewSave();
+	void NewSave(FString saveName);
+	UFUNCTION(BlueprintCallable)
+		void ClearObjects();
 	
 };

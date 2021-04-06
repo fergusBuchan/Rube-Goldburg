@@ -15,12 +15,21 @@ class GOLDBURG_API AGoldburgGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 	
 		virtual void BeginPlay() override;
-
+public:
+	UFUNCTION(BlueprintCallable)
+		void MenuUI(bool uiOn);
 protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Meta = (BlueprintProtected = "true"))
 		TSubclassOf<class UUserWidget> PlayerHUDClass;
 
 	UPROPERTY()
-		class UUserWidget* onScreen;
+		class UUserWidget* playerHUD;
+
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Meta = (BlueprintProtected = "true"))
+		TSubclassOf<class UUserWidget> MenuHUDClass;
+
+	UPROPERTY()
+		class UUserWidget* menuHUD;
 };

@@ -25,6 +25,7 @@ void ATriggerButton::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPr
 	    AMovingActor* t = Cast<AMovingActor>(OtherActor);
 		if (t != NULL)
 		{
+			if(t->Type != 2)
 			t->running = false;
 		}
 		Press();

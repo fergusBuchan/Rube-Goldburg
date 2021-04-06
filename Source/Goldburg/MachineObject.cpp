@@ -168,6 +168,8 @@ void AMachineObject::Spawn()
 	//space outside of scene
 	SetActorLocation(FVector(-1000000, -10000000000, -10000));
 	LastValidPos = FVector(-1000000, -10000000000, -10000);
+	linkChannel = 0;
+	linked = false;
 }
 
 

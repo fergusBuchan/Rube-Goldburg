@@ -65,6 +65,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 		int TabNum;
+	UPROPERTY()
+		int ObjectTypeIndex;
 
 	bool linked;
 	int linkChannel = 0;
