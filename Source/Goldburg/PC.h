@@ -148,8 +148,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void setObjectChannel(int Channel);
 	
-	
-	
+	UPROPERTY(BlueprintReadWrite)
+		bool pickerOpen;
 	
 
 	
@@ -165,7 +165,7 @@ public:
 	UPROPERTY(EditAnywhere, Transient)
 		TArray<class AMachineObject*> ActiveObjects;
 	UPROPERTY(EditAnywhere, Transient)
-		TArray<class ATriggerButton*> Buttons;
+		TArray<class AActivator*> Activators;
 	//Array of pointers to static objects in the scene
 	UPROPERTY(EditAnywhere, Transient)
 		TArray<class AMachineObject*> StaticObjects;

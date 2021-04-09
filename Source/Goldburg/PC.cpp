@@ -16,6 +16,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Styling/SlateBrush.h"
 #include "TriggerButton.h"
+#include "Activator.h"
 #include "Mover.h"
 // Sets default values
 APC::APC()
@@ -83,7 +84,7 @@ void APC::BeginPlay()
 	following = false;
 	tracked = 0;
 	playing = false;
-
+	pickerOpen = false;
 }
 
 // Called every frame
@@ -492,6 +493,7 @@ void APC::Spawn(int index)
 	SelectedObject = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[index]));
 	if (SelectedObject != NULL)
 	{
+		pickerOpen = false;
 		SelectedObject->ObjectTypeIndex = index;
 		SelectedObject->Select(true);
 		SelectedPos = SelectedObject->position;
@@ -507,10 +509,10 @@ void APC::Spawn(int index)
 		SelectedObject->Spawn();
 		if (SelectedObject->Active == true)
 		{
-			ATriggerButton* temp = Cast<ATriggerButton>(SelectedObject);
+			AActivator* temp = Cast<AActivator>(SelectedObject);
 			if (temp != NULL)
 			{
-				Buttons.Add(temp);
+				Activators.Add(temp);
 			}
 			else
 			{
@@ -548,10 +550,10 @@ void APC::Spawn(UObjectSave* inputObject) {
 
 
 		if (newObject->Active == true) {
-			ATriggerButton* temp = Cast<ATriggerButton>(newObject);
+			AActivator* temp = Cast<AActivator>(newObject);
 			if (temp != NULL)
 			{
-				Buttons.Add(temp);
+				Activators.Add(temp);
 			}
 			else
 			{
@@ -573,7 +575,7 @@ void APC::Load(int index) {
 
 	StaticObjects.Empty();
 	ActiveObjects.Empty();
-	Buttons.Empty();
+	Activators.Empty();
 
 	SelectedObject = NULL;
 
@@ -612,11 +614,11 @@ void APC::ClearObjects() {
 	}
 	StaticObjects.Empty();
 
-	for (int i = 0; i < Buttons.Num(); i++) {
-		Buttons[i]->Destroy();
-		Buttons[i] = NULL;
+	for (int i = 0; i < Activators.Num(); i++) {
+		Activators[i]->Destroy();
+		Activators[i] = NULL;
 	}
-	Buttons.Empty();
+	Activators.Empty();
 
 }
 
@@ -645,12 +647,12 @@ void APC::Save() {
 		SaveGames[currentSave]->SavedObjects.Push(objPtr);
 	}
 
-	for (int i = 0; i < Buttons.Num(); i++) {
+	for (int i = 0; i < Activators.Num(); i++) {
 		objPtr = NewObject<class UObjectSave>();
 
-		objPtr->objectPosition = Buttons[i]->GetActorLocation();
-		objPtr->objectRotation = Buttons[i]->GetActorRotation();
-		objPtr->objectIndex = Buttons[i]->ObjectTypeIndex;
+		objPtr->objectPosition = Activators[i]->GetActorLocation();
+		objPtr->objectRotation = Activators[i]->GetActorRotation();
+		objPtr->objectIndex = Activators[i]->ObjectTypeIndex;
 
 		SaveGames[currentSave]->SavedObjects.Push(objPtr);
 	}
@@ -701,11 +703,11 @@ void APC::DeleteObject()
 				ActiveObjects.RemoveAt(i,1,true);
 			}
 		}
-		for (int i = 0; i < Buttons.Num(); i++)
+		for (int i = 0; i < Activators.Num(); i++)
 		{
-			if (SelectedObject == Buttons[i])
+			if (SelectedObject == Activators[i])
 			{
-				Buttons.RemoveAt(i, 1, true);
+				Activators.RemoveAt(i, 1, true);
 			}
 		}
 		for (int i = 0; i < StaticObjects.Num(); i++)
@@ -756,26 +758,26 @@ void APC::ClearScene()
 //Begin play mode
 void APC::Play()
 {
-	for (int i = 0; i < Buttons.Num(); i++)
+	for (int i = 0; i < Activators.Num(); i++)
 	{
-		if (Buttons[i] != NULL)
+		if (Activators[i] != NULL)
 		{
-			if (Buttons[i]->GetActorLocation().Y < -10000)
+			if (Activators[i]->GetActorLocation().Y < -10000)
 			{
-				Buttons[i]->Destroy();
-				Buttons.RemoveAt(i, 1, true);
+				Activators[i]->Destroy();
+				Activators.RemoveAt(i, 1, true);
 			}
 			else
 			{
-				Buttons[i]->Activate();
-				if (Buttons[i]->linked)
+				Activators[i]->Activate();
+				if (Activators[i]->linked)
 				{
-					Buttons[i]->ControlledObjects.Empty();
+					Activators[i]->ControlledObjects.Empty();
 					for (int j = 0; j < ActiveObjects.Num(); j++)
 					{
-						if (ActiveObjects[j]->linkChannel == Buttons[i]->linkChannel)
+						if (ActiveObjects[j]->linkChannel == Activators[i]->linkChannel)
 						{
-							Buttons[i]->ControlledObjects.Add(ActiveObjects[j]);
+							Activators[i]->ControlledObjects.Add(ActiveObjects[j]);
 						}
 					}
 				}
@@ -814,9 +816,9 @@ void APC::Play()
 //Stop play mode
 void APC::Stop()
 {
-	for (int i = 0; i < Buttons.Num(); i++)
+	for (int i = 0; i < Activators.Num(); i++)
 	{
-		Buttons[i]->Reset();
+		Activators[i]->Reset();
 	}
 
 	//Reset all active components

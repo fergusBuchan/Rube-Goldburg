@@ -39,9 +39,9 @@ void AMovingActor::Tick(float DeltaTime)
 		{
 			FVector rayStart = Body->GetSocketLocation(FName("Front"));
 			FVector rayEnd = rayStart + (GetActorRightVector() * frontRay);
-			//DrawDebugLine(GetWorld(), rayStart, rayEnd, FColor::Red, false, 5.0f);
+			DrawDebugLine(GetWorld(), rayStart, rayEnd, FColor::Red, false, 5.0f);
 			FHitResult* hit = new FHitResult();
-			//DrawDebugLine(GetWorld(), rayStart, rayEnd, FColor::Red, false, 5.0f);
+			DrawDebugLine(GetWorld(), rayStart, rayEnd, FColor::Red, false, 5.0f);
 			if(GetWorld()->LineTraceSingleByChannel(*hit, rayStart, rayEnd, ECollisionChannel::ECC_Visibility))
 			{
 				running = false;

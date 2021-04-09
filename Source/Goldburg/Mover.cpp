@@ -90,6 +90,11 @@ void AMover::Spawn()
 		{
 			CommandPointer->AttachToComponent(RootComponent, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 			CommandPointer->AddActorLocalOffset(ResetPosition);
+			GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Spawn Success")));
+		}
+		else
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Spawn Failed")));
 		}
 	}
 }

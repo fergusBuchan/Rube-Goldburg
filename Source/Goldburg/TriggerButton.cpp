@@ -25,24 +25,13 @@ void ATriggerButton::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPr
 	    AMovingActor* t = Cast<AMovingActor>(OtherActor);
 		if (t != NULL)
 		{
+			if(t->Type != 2)
 			t->running = false;
 		}
+		ActivatorBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		Press();
 }
 
-void ATriggerButton::Press()
-{
-	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Butotn Pressed")));
-	ActivatorBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	for (int i = 0; i < ControlledObjects.Num(); i++)
-	{
-		if (ControlledObjects[i] != NULL)
-		{
-			ControlledObjects[i]->Launch();
-		}
-	}
-
-}
 
 void ATriggerButton::Activate()
 {
