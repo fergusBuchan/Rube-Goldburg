@@ -657,6 +657,43 @@ void APC::Save() {
 	}
 }
 
+
+void APC::Save(int index) {
+	UObjectSave* objPtr;
+
+	SaveGames[index]->SavedObjects.Empty();
+
+	for (int i = 0; i < StaticObjects.Num(); i++) {
+		objPtr = NewObject<class UObjectSave>();
+
+		objPtr->objectPosition = StaticObjects[i]->GetActorLocation();
+		objPtr->objectRotation = StaticObjects[i]->GetActorRotation();
+		objPtr->objectIndex = StaticObjects[i]->ObjectTypeIndex;
+
+		SaveGames[index]->SavedObjects.Push(objPtr);
+	}
+
+	for (int i = 0; i < ActiveObjects.Num(); i++) {
+		objPtr = NewObject<class UObjectSave>();
+
+		objPtr->objectPosition = ActiveObjects[i]->GetActorLocation();
+		objPtr->objectRotation = ActiveObjects[i]->GetActorRotation();
+		objPtr->objectIndex = ActiveObjects[i]->ObjectTypeIndex;
+
+		SaveGames[index]->SavedObjects.Push(objPtr);
+	}
+
+	for (int i = 0; i < Activators.Num(); i++) {
+		objPtr = NewObject<class UObjectSave>();
+
+		objPtr->objectPosition = Activators[i]->GetActorLocation();
+		objPtr->objectRotation = Activators[i]->GetActorRotation();
+		objPtr->objectIndex = Activators[i]->ObjectTypeIndex;
+
+		SaveGames[index]->SavedObjects.Push(objPtr);
+	}
+}
+
 void APC::NewSave() {
 
 	SaveGames.Push(Cast<UWorldSave>(UGameplayStatics::CreateSaveGameObject(UWorldSave::StaticClass())));

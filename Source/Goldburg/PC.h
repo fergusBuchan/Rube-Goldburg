@@ -210,6 +210,7 @@ public:
 		void Load(int index);
 	UFUNCTION(BlueprintCallable)
 		void Save();
+		void Save(int index);
 	UFUNCTION(BlueprintCallable)
 		void NewSave();
 	void NewSave(FString saveName);
