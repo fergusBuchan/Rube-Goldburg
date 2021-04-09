@@ -30,7 +30,7 @@ public:
 
 	void Select(bool);
 	void Move(FVector);
-	void Rotate(bool);
+	virtual void Rotate(bool);
 	void Lift(float);
 	virtual void Launch();
 	virtual void Activate();
