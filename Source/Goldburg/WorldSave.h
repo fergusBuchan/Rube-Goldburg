@@ -9,13 +9,27 @@
 /**
  * 
  */
+USTRUCT()
+struct FSaveStruct
+{
+    GENERATED_BODY()
+public:
+	UPROPERTY()
+		int objectIndex;
+	UPROPERTY()
+		FVector objectPosition;
+	UPROPERTY()
+		FRotator objectRotation;
+
+};
+
 UCLASS()
 class GOLDBURG_API UWorldSave : public USaveGame
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(BlueprintReadOnly)
-		TArray<class UObjectSave*> SavedObjects;
+	UPROPERTY()
+		TArray<FSaveStruct> SavedObjects;
 	UPROPERTY(BlueprintReadWrite)
 		FString SaveName;
 };
