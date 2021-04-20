@@ -289,13 +289,7 @@ void APC::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 	{
 		if (SelectedObject != SelectedTemp)
 		{
-			if (SelectedObject != NULL)
-			{
-				SelectedObject->Select(false);
-				SelectedObject = NULL;
-				objSelected = false;
-				Selected = false;
-			}
+			DeselectObject();
 			SelectedObject = SelectedTemp;
 			if (SelectedObject != NULL)
 			{
@@ -310,19 +304,24 @@ void APC::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 	{
 		if (FVector::Dist(touchLoc, Location) < deselectDist)
 		{
-			//Deselect current object
-			if (SelectedObject != NULL)
-			{
-				SelectedObject->Select(false);
-				SelectedObject = NULL;
-				objSelected = false;
-				Selected = false;
-			}
+			DeselectObject();
 		}
 	}
 	SelectedTemp = nullptr;SelectedTemp2 = nullptr;
 	//if not moved
 	
+}
+
+void APC::DeselectObject()
+{
+	//Deselect current object
+	if (SelectedObject != NULL)
+	{
+		SelectedObject->Select(false);
+		SelectedObject = NULL;
+		objSelected = false;
+		Selected = false;
+	}
 }
 
 
@@ -481,14 +480,7 @@ void APC::setObjectChannel(int Channel)
 //Spawn object
 void APC::Spawn(int index)
 {
-	//deselect current object
-	if (SelectedObject != NULL)
-	{
-		SelectedObject->Select(false);
-		SelectedObject = NULL;
-		objSelected = false;
-		Selected = false;
-	}
+	DeselectObject();
 	//Spawn selected object
 	SelectedObject = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[index]));
 	if (SelectedObject != NULL)
@@ -686,9 +678,7 @@ void APC::DeleteObject()
 			temp->DestroyVehicle();
 		}
 		SelectedObject->Destroy();
-		SelectedObject = NULL;
-		objSelected = false;
-		Selected = false;
+		DeselectObject();
 	}
 }
 
@@ -697,13 +687,7 @@ void APC::ClearScene()
 {
 	if (!playing)
 	{
-		if (SelectedObject != NULL)
-		{
-			SelectedObject = NULL;
-			objSelected = false;
-			Selected = false;
-
-		}
+		DeselectObject();
 		for (int i = 0; i < ActiveObjects.Num(); i++)
 		{
 			ActiveObjects[i]->Destroy();
@@ -762,14 +746,7 @@ void APC::Play()
 			}
 		}
 	}
-	//Deselect current object
-	if (SelectedObject != NULL)
-	{
-		SelectedObject->Select(false);
-		SelectedObject = NULL;
-		objSelected = false;
-		Selected = false;
-	}
+	DeselectObject();
 	playing = true;
 	//Close object menu
 	ObjectMenuOpen = false;

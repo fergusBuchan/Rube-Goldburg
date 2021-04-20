@@ -52,6 +52,9 @@ public:
 	void TouchStarted(ETouchIndex::Type FingerIndex, FVector Location);
 	/** Handler for when a touch input stops. */
 	void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
+	UFUNCTION(BlueprintCallable)
+		void DeselectObject();
+
 	//Player Controls
 	void MouseX(float value);
 	void MouseY(float value);
