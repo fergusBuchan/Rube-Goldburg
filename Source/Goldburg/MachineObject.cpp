@@ -25,7 +25,7 @@ AMachineObject::AMachineObject()
 	Mesh->AttachTo(RootComponent);
 	//Set Mesh Collision
 	Mesh->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel3, ECollisionResponse::ECR_Block);
-
+	solid = true;
 	height = 60;
 }
 

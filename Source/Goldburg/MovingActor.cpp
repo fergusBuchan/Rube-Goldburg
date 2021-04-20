@@ -109,6 +109,7 @@ void AMovingActor::Tick(float DeltaTime)
 		}
 		else if (Type == 2)
 		{
+			Body->SetPhysicsLinearVelocity(Body->GetUpVector() * Body->GetComponentVelocity().Size());
 			Body->AddForce(Body->GetUpVector() * velocity);
 		}
 		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Vel: %f"), VelSave.Y));
