@@ -9,6 +9,7 @@
 #include <Engine.h>
 #include "DrawDebugHelpers.h"
 #include "MovingActor.h"
+#include "TypeCar.h"
 
 ATriggerButton::ATriggerButton()
 {
@@ -22,13 +23,22 @@ ATriggerButton::ATriggerButton()
 
 void ATriggerButton::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	    AMovingActor* t = Cast<AMovingActor>(OtherActor);
+	if (disableOther)
+	{
+		AMovingActor* t = Cast<AMovingActor>(OtherActor);
 		if (t != NULL)
 		{
-			if(t->Type != 2)
-			t->running = false;
+			if (t->Type != 2)
+				t->running = false;
 		}
+		ATypeCar* u = Cast<ATypeCar>(OtherActor);
+		if (u != NULL)
+		{
+			u->running = false;
+		}
+	}
 		ActivatorBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	
 		Press();
 }
 

@@ -289,13 +289,7 @@ void APC::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 	{
 		if (SelectedObject != SelectedTemp)
 		{
-			if (SelectedObject != NULL)
-			{
-				SelectedObject->Select(false);
-				SelectedObject = NULL;
-				objSelected = false;
-				Selected = false;
-			}
+			DeselectObject();
 			SelectedObject = SelectedTemp;
 			if (SelectedObject != NULL)
 			{
@@ -310,19 +304,24 @@ void APC::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 	{
 		if (FVector::Dist(touchLoc, Location) < deselectDist)
 		{
-			//Deselect current object
-			if (SelectedObject != NULL)
-			{
-				SelectedObject->Select(false);
-				SelectedObject = NULL;
-				objSelected = false;
-				Selected = false;
-			}
+			DeselectObject();
 		}
 	}
 	SelectedTemp = nullptr;SelectedTemp2 = nullptr;
 	//if not moved
 	
+}
+
+void APC::DeselectObject()
+{
+	//Deselect current object
+	if (SelectedObject != NULL)
+	{
+		SelectedObject->Select(false);
+		SelectedObject = NULL;
+		objSelected = false;
+		Selected = false;
+	}
 }
 
 
@@ -481,14 +480,7 @@ void APC::setObjectChannel(int Channel)
 //Spawn object
 void APC::Spawn(int index)
 {
-	//deselect current object
-	if (SelectedObject != NULL)
-	{
-		SelectedObject->Select(false);
-		SelectedObject = NULL;
-		objSelected = false;
-		Selected = false;
-	}
+	DeselectObject();
 	//Spawn selected object
 	SelectedObject = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[index]));
 	if (SelectedObject != NULL)
@@ -526,26 +518,18 @@ void APC::Spawn(int index)
 	}
 }
 
-void APC::Spawn(UObjectSave* inputObject) {
+void APC::Spawn(FSaveStruct inputObject) {
 
 	//Spawn input object
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("object x:%f"), inputObject->objectPosition.X));
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("object y:%f"), inputObject->objectPosition.Y));
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("object z:%f"), inputObject->objectPosition.Z));
 
-	AMachineObject* newObject = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[inputObject->objectIndex]));
+	AMachineObject* newObject = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[inputObject.objectIndex]));
 	if (newObject != NULL)
 	{
 		//newObject->Spawn();
-		newObject->SetActorLocation(inputObject->objectPosition);
+		newObject->SetActorLocation(inputObject.objectPosition);
 
-
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("object x:%f"), newObject->GetActorLocation().X));
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("object y:%f"), newObject->GetActorLocation().Y));
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("object z:%f"), newObject->GetActorLocation().Z));
-
-		newObject->SetActorRotation(inputObject->objectRotation);
-		newObject->ObjectTypeIndex = inputObject->objectIndex;
+		newObject->SetActorRotation(inputObject.objectRotation);
+		newObject->ObjectTypeIndex = inputObject.objectIndex;
 
 
 
@@ -564,112 +548,82 @@ void APC::Spawn(UObjectSave* inputObject) {
 			StaticObjects.Add(newObject);
 		}
 	}
-
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("object x:%f"), newObject->GetActorLocation().X));
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("object y:%f"), newObject->GetActorLocation().Y));
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("object z:%f"), newObject->GetActorLocation().Z));
 }
 
-void APC::Load(int index) {
-	class UWorldSave* loadingSave = SaveGames[index];
+void APC::Load(FString saveName) {
 
-	StaticObjects.Empty();
-	ActiveObjects.Empty();
-	Activators.Empty();
+	SelectedObject->Select(false);
+	//some weird bugs happen with the seleceted object
 
-	SelectedObject = NULL;
-
-	if (loadingSave != nullptr) {
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("Test")));
+	ClearScene();
+	if (UWorldSave* loadingSave = Cast<UWorldSave>(UGameplayStatics::LoadGameFromSlot(saveName, 0)))
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("load sucsessful")));
+	
+		loadingSave->SaveName = saveName;
 		for (int i = 0; i < loadingSave->SavedObjects.Num(); i++) {
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("load object")));
+			loadingSave->SaveName = saveName;
 			Spawn(loadingSave->SavedObjects[i]);
 		}
-		currentSave = index;
-	}//if there is a save to load, take all saved objects and spawn objects in their postiion
+	}
 	else {
-		//error
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("load unsucsessful")));
 	}
+
+	currentSave = saveName;
 }
 
-void APC::ClearObjects() {
+void APC::Save(FString saveName) {
 
-	SelectedObject = NULL;
-	objSelected = false;
-	Selected = false;
-	//need to reset selected obeject
+	SelectedObject->Select(false);
+	//some weird bugs happen with the seleceted object
 
-	for (int i = 0; i < ActiveObjects.Num(); i++) {
-		AMover* temp = Cast<AMover>(ActiveObjects[i]);
-		if (temp != NULL)
-		{
-			temp->DestroyVehicle();
-		}
-		ActiveObjects[i]->Destroy();
-		ActiveObjects[i] = NULL;
-	}
-	ActiveObjects.Empty();
+	UWorldSave* savePtr = NewObject<class UWorldSave>();
+
+
+
+	FSaveStruct objPtr;
 
 	for (int i = 0; i < StaticObjects.Num(); i++) {
-		StaticObjects[i]->Destroy();
-		StaticObjects[i] = NULL;
-	}
-	StaticObjects.Empty();
 
-	for (int i = 0; i < Activators.Num(); i++) {
-		Activators[i]->Destroy();
-		Activators[i] = NULL;
-	}
-	Activators.Empty();
+		objPtr.objectPosition = StaticObjects[i]->GetActorLocation();
+		objPtr.objectRotation = StaticObjects[i]->GetActorRotation();
+		objPtr.objectIndex = StaticObjects[i]->ObjectTypeIndex;
 
-}
-
-void APC::Save() {
-	UObjectSave* objPtr;
-
-	SaveGames[currentSave]->SavedObjects.Empty();
-
-	for (int i = 0; i < StaticObjects.Num(); i++) {
-		objPtr = NewObject<class UObjectSave>();
-
-		objPtr->objectPosition = StaticObjects[i]->GetActorLocation();
-		objPtr->objectRotation = StaticObjects[i]->GetActorRotation();
-		objPtr->objectIndex = StaticObjects[i]->ObjectTypeIndex;
-
-		SaveGames[currentSave]->SavedObjects.Push(objPtr);
+		savePtr->SavedObjects.Push(objPtr);
 	}
 
 	for (int i = 0; i < ActiveObjects.Num(); i++) {
-		objPtr = NewObject<class UObjectSave>();
 
-		objPtr->objectPosition = ActiveObjects[i]->GetActorLocation();
-		objPtr->objectRotation = ActiveObjects[i]->GetActorRotation();
-		objPtr->objectIndex = ActiveObjects[i]->ObjectTypeIndex;
+		objPtr.objectPosition = ActiveObjects[i]->GetActorLocation();
+		objPtr.objectRotation = ActiveObjects[i]->GetActorRotation();
+		objPtr.objectIndex = ActiveObjects[i]->ObjectTypeIndex;
 
-		SaveGames[currentSave]->SavedObjects.Push(objPtr);
+		savePtr->SavedObjects.Push(objPtr);
 	}
 
 	for (int i = 0; i < Activators.Num(); i++) {
-		objPtr = NewObject<class UObjectSave>();
 
-		objPtr->objectPosition = Activators[i]->GetActorLocation();
-		objPtr->objectRotation = Activators[i]->GetActorRotation();
-		objPtr->objectIndex = Activators[i]->ObjectTypeIndex;
+		objPtr.objectPosition = Activators[i]->GetActorLocation();
+		objPtr.objectRotation = Activators[i]->GetActorRotation();
+		objPtr.objectIndex = Activators[i]->ObjectTypeIndex;
 
-		SaveGames[currentSave]->SavedObjects.Push(objPtr);
+		savePtr->SavedObjects.Push(objPtr);
+	}
+
+	if (UGameplayStatics::SaveGameToSlot(savePtr, saveName, 0))
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("save sucsessful")));
+	}
+	else {
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("save failed")));
 	}
 }
 
-void APC::NewSave() {
-
-	SaveGames.Push(Cast<UWorldSave>(UGameplayStatics::CreateSaveGameObject(UWorldSave::StaticClass())));
-	SaveGames.Last()->SaveName = FString::Printf(TEXT("save : %f"), SaveGames.Num());
-	Load(SaveGames.Num() - 1);
-}
-
-void APC::NewSave(FString NewSaveName) {
-	UWorldSave* tempSave = Cast<UWorldSave>(UGameplayStatics::CreateSaveGameObject(UWorldSave::StaticClass()));
-	SaveGames.Add(tempSave);
-	tempSave->SaveName = NewSaveName;
-	Load(SaveGames.Num() - 1);
+void APC::DeleteSave(FString saveName) {
+	UGameplayStatics::DeleteGameInSlot(saveName,0);
 }
 
 //Rotate object 90 degrees clockwise
@@ -724,9 +678,7 @@ void APC::DeleteObject()
 			temp->DestroyVehicle();
 		}
 		SelectedObject->Destroy();
-		SelectedObject = NULL;
-		objSelected = false;
-		Selected = false;
+		DeselectObject();
 	}
 }
 
@@ -735,13 +687,7 @@ void APC::ClearScene()
 {
 	if (!playing)
 	{
-		if (SelectedObject != NULL)
-		{
-			SelectedObject = NULL;
-			objSelected = false;
-			Selected = false;
-
-		}
+		DeselectObject();
 		for (int i = 0; i < ActiveObjects.Num(); i++)
 		{
 			ActiveObjects[i]->Destroy();
@@ -800,14 +746,7 @@ void APC::Play()
 			}
 		}
 	}
-	//Deselect current object
-	if (SelectedObject != NULL)
-	{
-		SelectedObject->Select(false);
-		SelectedObject = NULL;
-		objSelected = false;
-		Selected = false;
-	}
+	DeselectObject();
 	playing = true;
 	//Close object menu
 	ObjectMenuOpen = false;

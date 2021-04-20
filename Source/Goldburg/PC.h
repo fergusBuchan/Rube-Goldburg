@@ -52,6 +52,9 @@ public:
 	void TouchStarted(ETouchIndex::Type FingerIndex, FVector Location);
 	/** Handler for when a touch input stops. */
 	void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
+	UFUNCTION(BlueprintCallable)
+		void DeselectObject();
+
 	//Player Controls
 	void MouseX(float value);
 	void MouseY(float value);
@@ -88,6 +91,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void Spawn(int index);
+		void Spawn(FSaveStruct inputObject);
 
 
 
@@ -141,7 +145,7 @@ public:
 		UTexture2D* DefaultIMG;
 	UFUNCTION(BlueprintCallable)
 		UTexture2D* getImg(int Index);
-		void Spawn(UObjectSave* inputObject);
+		void Spawn(UObjectSave inputObject);
 
 	UFUNCTION(BlueprintCallable)
 		int getObjectChannel();
@@ -202,18 +206,12 @@ public:
 
 
 	UPROPERTY(BlueprintReadWrite)
-		TArray<class UWorldSave*> SaveGames;
-	UPROPERTY(BlueprintReadWrite)
-		int currentSave;
-
+		FString currentSave;
 	UFUNCTION(BlueprintCallable)
-		void Load(int index);
+		void Load(FString saveName);
 	UFUNCTION(BlueprintCallable)
-		void Save();
+		void Save(FString saveName);
 	UFUNCTION(BlueprintCallable)
-		void NewSave();
-	void NewSave(FString saveName);
-	UFUNCTION(BlueprintCallable)
-		void ClearObjects();
+		void DeleteSave(FString saveName);
 	
 };

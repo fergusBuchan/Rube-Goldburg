@@ -14,7 +14,7 @@ void AScrew::Tick(float DeltaTime)
 	if (running)
 	{
 		FRotator NewRotation;
-		NewRotation = FRotator(0, RotSpeed, 0);
+		NewRotation = FRotator(0, RotSpeed * DeltaTime, 0);
 		Mesh->AddWorldRotation(NewRotation);
 	}
 	//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("DT: %f"), DeltaTime));

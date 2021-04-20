@@ -13,8 +13,14 @@ void AGoldburgGameModeBase::BeginPlay()
 
 	menuHUD = CreateWidget<UUserWidget>(GetWorld(), MenuHUDClass);
 	playerHUD = CreateWidget<UUserWidget>(GetWorld(), PlayerHUDClass);
-
-	menuHUD->AddToViewport();
+	if (menuHUD != nullptr)
+	{
+		menuHUD->AddToViewport();
+	}
+	else
+	{
+		playerHUD->AddToViewport();
+	}
 
 	if (PlayerHUDClass != nullptr)
 	{

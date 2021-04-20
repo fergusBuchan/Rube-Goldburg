@@ -25,4 +25,8 @@ public:
 	
 	void Activate() override;
 	void Reset() override;
+
+
+	UPROPERTY(EditAnywhere)
+		bool disableOther;
 };

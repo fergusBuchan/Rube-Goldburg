@@ -30,7 +30,7 @@ void AMover::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveC
 	if ((OtherActor != NULL) && (OtherActor != this) && (OtherComp != NULL))
 	{
 		running = false;
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Collided")));
+		//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Collided")));
 	}
 }
 
@@ -49,7 +49,7 @@ void AMover::Launch()
 {
 	running = true;
 	CommandPointer->Launch(GetActorRightVector(),GetActorRotation(), GetActorLocation());
-	GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Launch")));
+	//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Launch")));
 }
 
 void AMover::Activate()
@@ -90,7 +90,7 @@ void AMover::Spawn()
 		{
 			CommandPointer->AttachToComponent(RootComponent, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 			CommandPointer->AddActorLocalOffset(ResetPosition);
-			GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Spawn Success")));
+			//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Spawn Success")));
 		}
 		else
 		{

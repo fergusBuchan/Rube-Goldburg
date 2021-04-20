@@ -23,7 +23,7 @@ void ALaserEmitter::Tick(float DeltaTime)
 			{
 				end = true;
 			}
-			if (GetWorld()->LineTraceSingleByChannel(*hit, rayStart, rayEnd, ECollisionChannel::ECC_Visibility))
+			if (GetWorld()->LineTraceSingleByChannel(*hit, rayStart, rayEnd, ECollisionChannel::ECC_GameTraceChannel5))
 			{
 				GetWorld()->LineBatcher->DrawLine(rayStart, hit->Location, FColor::Red, SDPG_World, laserThickness, 1);
 				//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, hit->GetActor()->GetName());
