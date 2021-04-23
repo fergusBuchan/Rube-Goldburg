@@ -141,6 +141,8 @@ void ATypeCar::Activate()
 void ATypeCar::Launch()
 {
 	running = true;
+	IsActivated = true;
+	
 }
 
 void ATypeCar::Reset()

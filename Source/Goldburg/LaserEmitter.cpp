@@ -8,11 +8,16 @@
 
 void ALaserEmitter::Tick(float DeltaTime)
 {
+	// I have no idea why but the blueprint tick wasnt working without the below line so i added it for sound. It doesnt appear to have broken anything but if it has feel free to shout at me - Daniel Mckinlay
+	Super::Tick(DeltaTime);
+
 	position = GetActorLocation();
 	if (firing)
 	{
 		int lockout = reflectionLimit;
 		bool end = false;
+		
+
 		FVector rayStart = Mesh->GetSocketLocation(FName("Emitter"));
 		FVector rayEnd = rayStart + (GetActorForwardVector() * 5000);
 		FHitResult* hit = new FHitResult();
@@ -111,6 +116,8 @@ void ALaserEmitter::Launch()
 	firing = true;
 	Mirrors = 0;
 	currentMirror = 0;
+	// for sound
+	IsActivated = true;
 }
 
 void ALaserEmitter::Reset()

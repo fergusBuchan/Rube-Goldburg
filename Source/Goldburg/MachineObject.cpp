@@ -40,7 +40,7 @@ void AMachineObject::BeginPlay()
 void AMachineObject::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	
 	position = GetActorLocation();
 }
 

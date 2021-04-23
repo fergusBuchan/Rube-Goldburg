@@ -25,6 +25,7 @@ void ADriver::Tick(float DeltaTime)
 
 	if (running)
 	{
+		
 		AddMovementInput(GetActorRightVector(), velocity);
 	}
 }

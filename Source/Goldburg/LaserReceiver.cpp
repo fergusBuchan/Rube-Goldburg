@@ -28,6 +28,9 @@ void ALaserReceiver::Trigger()
 	{
 		Press();
 		fired = true;
+
+		// for sound
+		IsActivated = true;
 	}
 }
 

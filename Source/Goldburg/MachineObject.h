@@ -65,6 +65,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 		int TabNum;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+		bool IsActivated;
 	UPROPERTY()
 		int ObjectTypeIndex;
 

@@ -13,6 +13,7 @@ void AScrew::Tick(float DeltaTime)
 	
 	if (running)
 	{
+		
 		FRotator NewRotation;
 		NewRotation = FRotator(0, RotSpeed * DeltaTime, 0);
 		Mesh->AddWorldRotation(NewRotation);
