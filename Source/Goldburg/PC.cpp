@@ -5,6 +5,7 @@
 
 #include "MachineObject.h"
 #include <GameFramework\SpringArmComponent.h>
+#include "Components/StaticMeshComponent.h"
 #include <Camera\CameraComponent.h>
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/InputComponent.h"
@@ -18,6 +19,7 @@
 #include "TriggerButton.h"
 #include "Activator.h"
 #include "Mover.h"
+#include "Misc/App.h"
 // Sets default values
 APC::APC()
 {
@@ -30,23 +32,23 @@ APC::APC()
 	Camera = CreateDefaultSubobject<UCameraComponent>("Camera");
 	Camera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 
-	MoveIMG = CreateDefaultSubobject<UPaperSpriteComponent>("Move Button?");
+	MoveIMG = CreateDefaultSubobject<UStaticMeshComponent>("Move Button?");
 	MoveIMG->SetVisibility(false);
 	MoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	MoveIMG->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel4, ECollisionResponse::ECR_Block);
 	
-	LiftIMG = CreateDefaultSubobject<UPaperSpriteComponent>("Lift Button");
+	LiftIMG = CreateDefaultSubobject<UStaticMeshComponent>("Lift Button");
 	LiftIMG->SetVisibility(false);
 	LiftIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	LiftIMG->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel4, ECollisionResponse::ECR_Block);
 
-	RotCIMG = CreateDefaultSubobject<UPaperSpriteComponent>("Rot Clockwise Button");
+	RotCIMG = CreateDefaultSubobject<UStaticMeshComponent>("Rot Clockwise Button");
 	RotCIMG->AttachToComponent(Camera, FAttachmentTransformRules::KeepRelativeTransform);
 	RotCIMG->SetVisibility(false);
 	RotCIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	RotCIMG->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel4, ECollisionResponse::ECR_Block);
 
-	RotACIMG = CreateDefaultSubobject<UPaperSpriteComponent>("Rot Anti-Clockwise Button");
+	RotACIMG = CreateDefaultSubobject<UStaticMeshComponent>("Rot Anti-Clockwise Button");
 	RotACIMG->AttachToComponent(Camera,FAttachmentTransformRules::KeepRelativeTransform);
 	RotACIMG->SetVisibility(false);
 	RotACIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
@@ -328,13 +330,13 @@ void APC::DeselectObject()
 void APC::MouseX(float value)
 {
 	if(!Fixed)
-	AddControllerYawInput(value * StickSensitivity);
+	AddControllerYawInput(value * StickSensitivity * GetWorld()->DeltaTimeSeconds);
 }
 
 void APC::MouseY(float value)
 {
 	if (!Fixed)
-	AddControllerPitchInput(value * StickSensitivity);
+	AddControllerPitchInput(value * StickSensitivity * GetWorld()->DeltaTimeSeconds);
 }
 
 //Set player height

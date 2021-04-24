@@ -35,13 +35,13 @@ public:
 	
 	
 	UPROPERTY(EditAnywhere)
-		class UPaperSpriteComponent* MoveIMG;
+		class UStaticMeshComponent* MoveIMG;
 	UPROPERTY(EditAnywhere)
-		class UPaperSpriteComponent* LiftIMG;
+		class UStaticMeshComponent* LiftIMG;
 	UPROPERTY(EditAnywhere)
-		class UPaperSpriteComponent* RotCIMG;
+		class UStaticMeshComponent* RotCIMG;
 	UPROPERTY(EditAnywhere)
-		class UPaperSpriteComponent* RotACIMG;
+		class UStaticMeshComponent* RotACIMG;
 	
 	APlayerController* controller;
 
