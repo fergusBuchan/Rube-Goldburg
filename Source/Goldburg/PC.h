@@ -70,10 +70,13 @@ public:
 		void ZoomOut();
 
 	UFUNCTION(BlueprintCallable)
-		void SetHeight(float newHeight);
-	
-	UFUNCTION(BlueprintCallable)
-		float GetHeight();
+		void IncreaseHeight(bool rising);
+	UPROPERTY(EditAnywhere)
+		float maxHeight;
+	UPROPERTY(EditAnywhere)
+		float minHeight;
+	UPROPERTY(EditAnywhere)
+		float heightDelta;
 	
 	
 
@@ -145,6 +148,9 @@ public:
 		UTexture2D* DefaultIMG;
 	UFUNCTION(BlueprintCallable)
 		UTexture2D* getImg(int Index);
+	UFUNCTION(BlueprintCallable)
+		int getTabNumber(int index);
+
 		void Spawn(UObjectSave inputObject);
 
 	UFUNCTION(BlueprintCallable)

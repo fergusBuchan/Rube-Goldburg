@@ -72,6 +72,4 @@ public:
 
 	bool linked;
 	int linkChannel = 0;
-	UPROPERTY(EditAnywhere)
-	bool solid;
 };

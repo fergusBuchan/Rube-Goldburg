@@ -340,15 +340,33 @@ void APC::MouseY(float value)
 }
 
 //Set player height
-void APC::SetHeight(float newHeight)
+void APC::IncreaseHeight(bool rising)
 {
-	SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y,newHeight));
+	if (rising)
+	{
+		if ((GetActorLocation().Z + heightDelta) < maxHeight)
+		{
+			SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z + heightDelta));
+		}
+		else
+		{
+			SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, maxHeight));
+		}
+	}
+	else
+	{
+		if ((GetActorLocation().Z - heightDelta) > minHeight)
+		{
+			SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z - heightDelta));
+		}
+		else
+		{
+			SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, minHeight));
+		}
+		
+	}
 }
 
-float APC::GetHeight()
-{
-	return GetActorLocation().Z;
-}
 
 //Toggle fixed camera
 void APC::SetFixed()
@@ -455,6 +473,22 @@ UTexture2D* APC::getImg(int Index)
 		UTexture2D* tempTex = a->OBJIMG;
 		a->Destroy();
 		return tempTex;
+	}
+}
+
+int APC::getTabNumber(int Index)
+{
+	AMachineObject* a = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[Index]));
+	if (a == NULL)
+	{
+		a->Destroy();
+		return -1;
+	}
+	else
+	{
+		int number = a->TabNum;
+		a->Destroy();
+		return number;
 	}
 }
 
