@@ -31,4 +31,5 @@ public:
 	float newMirrorTimer;
 	UPROPERTY(EditAnywhere)
 		float mirrorInterval;
+	
 };

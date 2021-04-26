@@ -25,7 +25,6 @@ AMachineObject::AMachineObject()
 	Mesh->AttachTo(RootComponent);
 	//Set Mesh Collision
 	Mesh->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel3, ECollisionResponse::ECR_Block);
-	solid = true;
 	height = 60;
 }
 
@@ -40,7 +39,7 @@ void AMachineObject::BeginPlay()
 void AMachineObject::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	
 	position = GetActorLocation();
 }
 
