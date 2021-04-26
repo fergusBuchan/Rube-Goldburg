@@ -13,5 +13,19 @@ UCLASS()
 class GOLDBURG_API ARocket : public AMachineObject
 {
 	GENERATED_BODY()
-	
+public:
+		UPROPERTY(EditAnywhere)
+		class USkeletalMeshComponent* Body;
+
+	ARocket();
+	void Tick(float DeltaTime) override;
+	void Launch() override;
+	void Activate() override;
+	void Reset() override;
+	bool running;
+	UPROPERTY(EditAnywhere)
+		float velocity;
+	UPROPERTY(EditAnywhere)
+	float lifeTime;
+	float lifeTimer;
 };

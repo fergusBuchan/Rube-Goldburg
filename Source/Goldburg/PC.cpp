@@ -20,6 +20,7 @@
 #include "Activator.h"
 #include "Mover.h"
 #include "Misc/App.h"
+#include "Volcano.h"
 // Sets default values
 APC::APC()
 {
@@ -36,6 +37,11 @@ APC::APC()
 	MoveIMG->SetVisibility(false);
 	MoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	MoveIMG->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel4, ECollisionResponse::ECR_Block);
+
+	LargeMoveIMG = CreateDefaultSubobject<UStaticMeshComponent>("Large Move Button?");
+	LargeMoveIMG->SetVisibility(false);
+	LargeMoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	LargeMoveIMG->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel4, ECollisionResponse::ECR_Block);
 	
 	LiftIMG = CreateDefaultSubobject<UStaticMeshComponent>("Lift Button");
 	LiftIMG->SetVisibility(false);
@@ -53,6 +59,12 @@ APC::APC()
 	RotACIMG->SetVisibility(false);
 	RotACIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	RotACIMG->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel4, ECollisionResponse::ECR_Block);
+
+	DuplicateIMG = CreateDefaultSubobject<UStaticMeshComponent>("dUPLICATE Button");
+	DuplicateIMG->AttachToComponent(Camera, FAttachmentTransformRules::KeepRelativeTransform);
+	DuplicateIMG->SetVisibility(false);
+	DuplicateIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	DuplicateIMG->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel4, ECollisionResponse::ECR_Block);
 
 	Speed = 1;
 	StickSensitivity = 1;
@@ -101,7 +113,7 @@ void APC::Tick(float DeltaTime)
 
 	if (clicked)
 	{
-		if (Selected && (moving || lifting))
+		if (Selected && ((moving || lifting)||duplicating))
 		{
 			if (SelectedObject != NULL)
 			{
@@ -147,15 +159,28 @@ void APC::Tick(float DeltaTime)
 	if (SelectedObject != NULL)
 	{
 		SelectedPos = SelectedObject->position;
-		MoveIMG->SetVisibility(true);
-		MoveIMG->SetWorldLocation(FVector(SelectedPos.X, SelectedPos.Y, 21));//21 is just above current floor height
+		AVolcano* vol = Cast<AVolcano>(SelectedObject);
+		if (vol != NULL)
+		{
+			LargeMoveIMG->SetVisibility(true);
+			LargeMoveIMG->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+			LargeMoveIMG->SetWorldLocation(FVector(SelectedPos.X, SelectedPos.Y, 1021));//21 is just above current floor height
+		}
+		else
+		{
+			MoveIMG->SetVisibility(true);
+			MoveIMG->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+			MoveIMG->SetWorldLocation(FVector(SelectedPos.X, SelectedPos.Y, 1021));//21 is just above current floor height
+		}
 		if (GetControlRotation().Pitch < 285 && GetControlRotation().Pitch > 255)
 		{
 			LiftIMG->SetVisibility(false);
+			LiftIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		}
 		else
 		{
 			LiftIMG->SetVisibility(true);
+			LiftIMG->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 		}
 		LiftIMG->SetWorldLocation(FVector(SelectedPos.X, SelectedPos.Y, SelectedPos.Z + SelectedObject->height));
 		FVector diff = Camera->GetComponentLocation() - SelectedPos;
@@ -164,17 +189,30 @@ void APC::Tick(float DeltaTime)
 		FRotator temp = UKismetMathLibrary::MakeRotFromX(diff);
 		LiftIMG->SetWorldRotation(FRotator(temp.Pitch, temp.Yaw + 90, temp.Roll));
 		RotCIMG->SetVisibility(true);
+		RotCIMG->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 		RotCIMG->SetWorldLocation(SelectedPos + (VectorRight * 70));
 		RotACIMG->SetVisibility(true);
+		RotACIMG->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 		RotACIMG->SetWorldLocation(SelectedPos + (VectorRight * -70));
+		DuplicateIMG->SetVisibility(true); 
+		DuplicateIMG->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+		DuplicateIMG->SetWorldLocation(SelectedPos + (VectorRight * -70) + (VectorUp * SelectedObject->height));
 	}
 	else
 	{
 		//SelectedPos = FVector(0, 0, 0);
 		MoveIMG->SetVisibility(false);
+		MoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		LargeMoveIMG->SetVisibility(false);
+		LargeMoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		LiftIMG->SetVisibility(false);
+		LiftIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		RotCIMG->SetVisibility(false);
+		RotCIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		RotACIMG->SetVisibility(false);
+		RotACIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		DuplicateIMG->SetVisibility(false);
+		DuplicateIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	}
 	if (playing)
 	{
@@ -243,7 +281,7 @@ void APC::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 			if (SelectedObject != NULL && controller->GetHitResultUnderFinger(ETouchIndex::Touch1, ECollisionChannel::ECC_GameTraceChannel4, false, Hit))
 			{
 				Selected = true;
-				if (Hit.Component == MoveIMG)
+				if (Hit.Component == MoveIMG || Hit.Component == LargeMoveIMG)
 				{
 					if (SelectedObject != NULL)
 					{
@@ -254,20 +292,28 @@ void APC::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 						moveOffset = FVector(0, 0, 0);
 					}
 					moving = true;
+					touchLoc = FVector(-100, -100, -100);
 				}
 				else if (Hit.Component == LiftIMG)
 				{
 					lifting = true;
+					touchLoc = FVector(-100, -100, -100);
 				}
 				else if (Hit.Component == RotCIMG)
 				{
 					RotateClockwise();
+					touchLoc = FVector(-100, -100, -100);
 				}
 				else if (Hit.Component == RotACIMG)
 				{
-					RotateAntiClockwise();
+					RotateAntiClockwise(); 
+					touchLoc = FVector(-100, -100, -100);
 				}
-				touchLoc = FVector(-100,-100,-100);
+				else if (Hit.Component == DuplicateIMG)
+				{
+					duplicating = true;
+					//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Duplicating start")));
+				}
 			}
 			else if (controller->GetHitResultUnderFinger(ETouchIndex::Touch1, ECollisionChannel::ECC_GameTraceChannel3, false, Hit))
 			{
@@ -287,26 +333,41 @@ void APC::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 	clicked = false;
 	moving = false;
 	lifting = false;
-	if ((SelectedTemp2 == SelectedTemp) && (SelectedTemp != NULL))
+	if (duplicating)
 	{
-		if (SelectedObject != SelectedTemp)
+		//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Duplicating stop")));
+		if ((FVector::Dist(touchLoc, Location) < deselectDist))
 		{
-			DeselectObject();
-			SelectedObject = SelectedTemp;
-			if (SelectedObject != NULL)
-			{
-				SelectedObject->Select(true);
-				SelectedPos = SelectedObject->position;
-				objSelected = true;
-				Selected = true;
-			}
+			
+
+			//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Duplicating spawn")));
+			Duplicate();
+			duplicating = false;
 		}
 	}
 	else
 	{
-		if (FVector::Dist(touchLoc, Location) < deselectDist)
+		if ((SelectedTemp2 == SelectedTemp) && (SelectedTemp != NULL))
 		{
-			DeselectObject();
+			if (SelectedObject != SelectedTemp)
+			{
+				DeselectObject();
+				SelectedObject = SelectedTemp;
+				if (SelectedObject != NULL)
+				{
+					SelectedObject->Select(true);
+					SelectedPos = SelectedObject->position;
+					objSelected = true;
+					Selected = true;
+				}
+			}
+		}
+		else
+		{
+			if (FVector::Dist(touchLoc, Location) < deselectDist)
+			{
+				DeselectObject();
+			}
 		}
 	}
 	SelectedTemp = nullptr;SelectedTemp2 = nullptr;
@@ -554,6 +615,50 @@ void APC::Spawn(int index)
 	}
 }
 
+void APC::Duplicate()
+{
+	int index = SelectedObject->ObjectTypeIndex;
+	FVector pos = SelectedObject->GetActorLocation();
+	DeselectObject();
+	//Spawn selected object
+	SelectedObject = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[index]));
+	if (SelectedObject != NULL)
+	{
+		pickerOpen = false;
+		SelectedObject->ObjectTypeIndex = index;
+		SelectedObject->Select(true);
+		SelectedPos = SelectedObject->position;
+		objSelected = true;
+		Selected = true;
+		//moving = true;
+		//FHitResult* hit = new FHitResult();
+		//controller->GetHitResultUnderFinger(ETouchIndex::Touch1, ECollisionChannel::ECC_GameTraceChannel2, false, *hit);
+		//if (hit != nullptr)
+		//{
+		//	SelectedObject->Move(hit->Location);
+		//}
+		//SelectedObject->Spawn();
+		SelectedObject->SetActorLocation(pos);
+		SelectedObject->LastValidPos = pos;
+		if (SelectedObject->Active == true)
+		{
+			AActivator* temp = Cast<AActivator>(SelectedObject);
+			if (temp != NULL)
+			{
+				Activators.Add(temp);
+			}
+			else
+			{
+				ActiveObjects.Add(SelectedObject);
+			}
+		}
+		else
+		{
+			StaticObjects.Add(SelectedObject);
+		}
+	}
+}
+
 void APC::Spawn(FSaveStruct inputObject) {
 
 	//Spawn input object
@@ -724,6 +829,11 @@ void APC::ClearScene()
 	if (!playing)
 	{
 		DeselectObject();
+		for (int i = 0; i < Activators.Num(); i++)
+		{
+			Activators[i]->Destroy();
+		}
+		Activators.Empty();
 		for (int i = 0; i < ActiveObjects.Num(); i++)
 		{
 			ActiveObjects[i]->Destroy();

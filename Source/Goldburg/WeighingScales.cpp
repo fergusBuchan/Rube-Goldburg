@@ -25,9 +25,7 @@ void AWeighingScales::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	position = GetActorLocation();
 	float targetAngle = (containedItems*(240/itemTrigger));
-	GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Target: %f"), targetAngle));
-	GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Actual: %f"), Hand->GetRelativeRotation().Pitch));
-
+	
 	if (AngleTurned < targetAngle)
 	{
 		Mesh->AddRelativeLocation(FVector(0, 0, -sinkSpeed * DeltaTime));
