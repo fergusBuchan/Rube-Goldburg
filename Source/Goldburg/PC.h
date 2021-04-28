@@ -37,11 +37,15 @@ public:
 	UPROPERTY(EditAnywhere)
 		class UStaticMeshComponent* MoveIMG;
 	UPROPERTY(EditAnywhere)
+		class UStaticMeshComponent* LargeMoveIMG;
+	UPROPERTY(EditAnywhere)
 		class UStaticMeshComponent* LiftIMG;
 	UPROPERTY(EditAnywhere)
 		class UStaticMeshComponent* RotCIMG;
 	UPROPERTY(EditAnywhere)
 		class UStaticMeshComponent* RotACIMG;
+	UPROPERTY(EditAnywhere)
+		class UStaticMeshComponent* DuplicateIMG;
 	
 	APlayerController* controller;
 
@@ -94,6 +98,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void Spawn(int index);
+	void Duplicate();
 		void Spawn(FSaveStruct inputObject);
 
 
@@ -187,7 +192,7 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 		bool playing;
 	bool follow;
-	
+	bool duplicating;
 	
 	UPROPERTY(BlueprintReadWrite)
 		bool objSelected;
@@ -220,4 +225,10 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void DeleteSave(FString saveName);
 	
+
+
+	UPROPERTY(BlueprintReadWrite)
+		float musicVolume;
+	UPROPERTY(BlueprintReadWrite)
+		float SFXVolume;
 };

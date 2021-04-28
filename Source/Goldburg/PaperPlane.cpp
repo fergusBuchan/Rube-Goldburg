@@ -8,7 +8,7 @@
 
 APaperPlane::APaperPlane()
 {
-	Body = CreateDefaultSubobject<USkeletalMeshComponent>("Mountian");
+	Body = CreateDefaultSubobject<USkeletalMeshComponent>("Body");
 	Body->AttachTo(RootComponent);
 }
 
@@ -20,23 +20,27 @@ void APaperPlane::Tick(float DeltaTime)
 	{
 		FVector rayStart = Body->GetSocketLocation(FName("Front"));
 		FVector rayEnd = rayStart + (Body->GetRightVector() * frontRay);
-		DrawDebugLine(GetWorld(), rayStart, rayEnd, FColor::Red, false, 5.0f);
+		//DrawDebugLine(GetWorld(), rayStart, rayEnd, FColor::Red, false, 5.0f);
 		FHitResult* hit = new FHitResult();
-		DrawDebugLine(GetWorld(), rayStart, rayEnd, FColor::Red, false, 5.0f);
+		//DrawDebugLine(GetWorld(), rayStart, rayEnd, FColor::Red, false, 5.0f);
 		if (GetWorld()->LineTraceSingleByChannel(*hit, rayStart, rayEnd, ECollisionChannel::ECC_Visibility))
 		{
 			running = false;
+			//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Stop")));
 		}
 		rayStart = Body->GetSocketLocation(FName("Back"));
 		rayEnd = rayStart + (Body->GetUpVector() * Down);
-		DrawDebugLine(GetWorld(), rayStart, rayEnd, FColor::Red, false, 5.0f);
+		//DrawDebugLine(GetWorld(), rayStart, rayEnd, FColor::Red, false, 5.0f);
 		hit = new FHitResult();
 		bool BackDown = GetWorld()->LineTraceSingleByChannel(*hit, rayStart, rayEnd, ECollisionChannel::ECC_Visibility);
 		if (!BackDown)
 		{
 			Body->SetPhysicsLinearVelocity((Body->GetRightVector() * velocity) + (FVector(0, 0, -1) * gravity));
 		}
-
+		if (Body->GetComponentLocation().X > BoundsXPlus || Body->GetComponentLocation().X < BoundsXMinus || Body->GetComponentLocation().Y > BoundsYPlus || Body->GetComponentLocation().Y < BoundsYMinus)
+		{
+			running = false;
+		}
 		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Vel: %f"), VelSave.Y));
 		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("X: %f"), GetActorLocation().X));
 	}

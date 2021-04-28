@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c2093391-794d-400d-9641-340f24ab592e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ColourPalletteMaterial.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ColourPalletteMaterial.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Colours/Glass_V2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Colours/Glass_V2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/MainScene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MainScene.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/MainScene_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MainScene_BuiltData.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Models/AT1_2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Models/AT1_2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Models/AT3.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Models/AT3.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Models/AT3_2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Models/AT3_2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Models/volcano/VolcanoAnim.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Models/volcano/VolcanoAnim.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/MyPC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MyPC.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Bottle.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Button1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Button2.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Button3.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Button4.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/Bulb.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/DominoBridge.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/DominoCross.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/DominoCurve.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/DominoSplit.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/DominoStraight.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/DominoStrairs.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/HVerticalReceiver1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/HVerticalReceiver2.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/HorizontalLaserReceiver.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/HorizontalMirror.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/LaserEmmitter.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/Mallet.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/PaperPlane.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/PlaneStart.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/Rocket.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/RocketPad.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/Scales.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/SeeSaw2.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/TrackBall.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/TrackBallFlat.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/TrackCatcher.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/TrackCross.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/TrackCurve.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/TrackRamp.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/TrackScrew.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/TrackSlide.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/TrackStraight.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/TypeSpeed.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/TypeTechnic.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/VerticalMirror.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Complete/VerticalMirror2.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Funnel.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Grate_Flat.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Grate_Slope.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/PlateSlope.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Plate_Flat.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Objects/Vulcan.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Plane.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Shaders/Cel-Shader.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Shaders/Cel-Shader.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Shaders/Cel-Shader_Inst.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Shaders/Cel-Shader_Inst.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Shaders/Cel-Shader_V2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Shaders/Cel-Shader_V2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/PopupMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/PopupMenu.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/TouchInterface.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/TouchInterface.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/UI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/UI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Widgets/Main.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Widgets/Main.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Widgets/Play.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Widgets/Play.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Widgets/Save.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Widgets/Save.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Goldburg/Balloon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Goldburg/Balloon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Goldburg/Balloon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Goldburg/Balloon.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Goldburg/PC.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Goldburg/PC.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Goldburg/PC.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Goldburg/PC.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Goldburg/PaperPlane.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Goldburg/PaperPlane.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Goldburg/PaperPlane.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Goldburg/PaperPlane.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Goldburg/Rocket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Goldburg/Rocket.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Goldburg/Rocket.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Goldburg/Rocket.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Goldburg/Volcano.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Goldburg/Volcano.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Goldburg/WeighingScales.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Goldburg/WeighingScales.cpp" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="13" />
+    <option name="y" value="-19" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2093391-794d-400d-9641-340f24ab592e" name="Default Changelist" comment="" />
+      <created>1619441191833</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619441191833</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.32068452" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="Resources Explorer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="TODO" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Assistant" order="2" visible="true" weight="0.3260212" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+    </layout>
+  </component>
+</project>

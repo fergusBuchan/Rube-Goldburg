@@ -32,4 +32,13 @@ public:
 		float velocity;
 	UPROPERTY(EditAnywhere)
 		float gravity;
+
+	UPROPERTY(EditAnywhere)
+		float BoundsXPlus;
+	UPROPERTY(EditAnywhere)
+		float BoundsXMinus;
+	UPROPERTY(EditAnywhere)
+		float BoundsYPlus;
+	UPROPERTY(EditAnywhere)
+		float BoundsYMinus;
 };
