@@ -46,7 +46,7 @@ void ATypeCar::Tick(float DeltaTime)
 	if (running)
 	{
 		FVector rayStart = Mesh->GetComponentLocation() + (Mesh->GetUpVector() * RayOffset);
-		FVector rayEnd = rayStart + (GetActorUpVector() * RayLenght);
+		FVector rayEnd = rayStart + (Mesh->GetUpVector() * RayLenght);
 		//DrawDebugLine(GetWorld(), rayStart, rayEnd, FColor::Red, false, 5.0f);
 		FHitResult* hit = new FHitResult();
 		if (GetWorld()->LineTraceSingleByChannel(*hit, rayStart, rayEnd, ECollisionChannel::ECC_Visibility))

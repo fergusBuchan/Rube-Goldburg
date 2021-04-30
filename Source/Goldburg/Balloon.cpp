@@ -50,7 +50,12 @@ void ABalloon::Tick(float DeltaTime)
 		{
 			BalloonBall->SetSphereRadius(BalloonBall->GetUnscaledSphereRadius() + (ScaleRate * DeltaTime));
 		}
-		GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Height %f"), BalloonBall->GetRelativeLocation().Z));
+		else
+		{
+			BalloonBall->SetSphereRadius(MaxScale);
+			playing = false;
+
+		}
 		if ((Balloon->GetRelativeLocation().Z <= MaxLift) && canGrow)
 		{
 			BalloonBall->AddLocalOffset(FVector(0, 0, (LiftRate * DeltaTime)));

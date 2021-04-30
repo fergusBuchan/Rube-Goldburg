@@ -33,7 +33,7 @@ public:
 	UPROPERTY(EditAnywhere)
 		class UCameraComponent* Camera;
 	
-	
+	bool HideUI;
 	UPROPERTY(EditAnywhere)
 		class UStaticMeshComponent* MoveIMG;
 	UPROPERTY(EditAnywhere)

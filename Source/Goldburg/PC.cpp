@@ -156,7 +156,7 @@ void APC::Tick(float DeltaTime)
 		controller->GetHitResultUnderFinger(ETouchIndex::Touch1, ECollisionChannel::ECC_GameTraceChannel3, false, Hit);
 		SelectedTemp2 = Cast<AMachineObject>(Hit.GetActor());
 	}
-	if (SelectedObject != NULL)
+	if (SelectedObject != NULL && !HideUI)
 	{
 		SelectedPos = SelectedObject->position;
 		AVolcano* vol = Cast<AVolcano>(SelectedObject);
@@ -213,6 +213,7 @@ void APC::Tick(float DeltaTime)
 		RotACIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		DuplicateIMG->SetVisibility(false);
 		DuplicateIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		HideUI = false;
 	}
 	if (playing)
 	{
@@ -577,6 +578,21 @@ void APC::setObjectChannel(int Channel)
 //Spawn object
 void APC::Spawn(int index)
 {
+	HideUI = true;
+
+	MoveIMG->SetVisibility(false);
+	MoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	LargeMoveIMG->SetVisibility(false);
+	LargeMoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	LiftIMG->SetVisibility(false);
+	LiftIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	RotCIMG->SetVisibility(false);
+	RotCIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	RotACIMG->SetVisibility(false);
+	RotACIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	DuplicateIMG->SetVisibility(false);
+	DuplicateIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
 	DeselectObject();
 	//Spawn selected object
 	SelectedObject = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[index]));
@@ -617,11 +633,30 @@ void APC::Spawn(int index)
 
 void APC::Duplicate()
 {
+	HideUI = true;
+	
+	MoveIMG->SetVisibility(false);
+	MoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	LargeMoveIMG->SetVisibility(false);
+	LargeMoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	LiftIMG->SetVisibility(false);
+	LiftIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	RotCIMG->SetVisibility(false);
+	RotCIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	RotACIMG->SetVisibility(false);
+	RotACIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	DuplicateIMG->SetVisibility(false);
+	DuplicateIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
 	int index = SelectedObject->ObjectTypeIndex;
 	FVector pos = SelectedObject->GetActorLocation();
+	FRotator rot = SelectedObject->GetActorRotation();
 	DeselectObject();
+
+	
 	//Spawn selected object
 	SelectedObject = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[index]));
+
 	if (SelectedObject != NULL)
 	{
 		pickerOpen = false;
@@ -639,6 +674,7 @@ void APC::Duplicate()
 		//}
 		//SelectedObject->Spawn();
 		SelectedObject->SetActorLocation(pos);
+		SelectedObject->SetActorRotation(rot);
 		SelectedObject->LastValidPos = pos;
 		if (SelectedObject->Active == true)
 		{
