@@ -38,6 +38,7 @@ void ARocket::Launch()
 	Body->SetSimulatePhysics(true);
 	running = true;
 	lifeTimer = lifeTime;
+	IsActivated = true;
 }
 
 void ARocket::Activate()
