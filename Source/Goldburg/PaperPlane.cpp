@@ -56,6 +56,7 @@ void APaperPlane::Launch()
 	Body->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	Body->SetSimulatePhysics(true);
 	running = true;
+	IsActivated = true;
 }
 
 void APaperPlane::Activate()
