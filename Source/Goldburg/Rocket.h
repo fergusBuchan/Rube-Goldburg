@@ -24,7 +24,7 @@ public:
 	void Reset() override;
 	bool running;
 	UPROPERTY(EditAnywhere)
-		float velocity;
+		float ForwardVelocity;
 	UPROPERTY(EditAnywhere)
 	float lifeTime;
 	float lifeTimer;

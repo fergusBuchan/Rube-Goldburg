@@ -72,4 +72,7 @@ public:
 
 	bool linked;
 	int linkChannel = 0;
+
+	UPROPERTY(BlueprintReadOnly)
+		float velocity;
 };

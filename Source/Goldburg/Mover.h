@@ -37,8 +37,6 @@ public:
 	void Spawn() override;
 	void DestroyVehicle();
 	UPROPERTY(EditAnywhere)
-		float Velocity;
-	UPROPERTY(EditAnywhere)
 		float Gravity;
 	bool running = false;
 	UPROPERTY(EditAnywhere)

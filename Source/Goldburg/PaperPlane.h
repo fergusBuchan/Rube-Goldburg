@@ -31,7 +31,7 @@ public:
 		float Down;
 	FVector direction;
 	UPROPERTY(EditAnywhere)
-		float velocity;
+		float ForwardVelocity;
 	UPROPERTY(EditAnywhere)
 		float gravity;
 

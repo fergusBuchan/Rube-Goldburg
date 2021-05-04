@@ -26,9 +26,14 @@ void ARocket::Tick(float DeltaTime)
 			running = false;
 		}
 		//Body->SetPhysicsLinearVelocity(Body->GetUpVector() * Body->GetComponentVelocity().Size());
-		Body->AddForce(Body->GetUpVector() * velocity);
+		Body->AddForce(Body->GetUpVector() * ForwardVelocity);
 		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Vel: %f"), VelSave.Y));
 		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("X: %f"), GetActorLocation().X));
+		velocity = Mesh->GetComponentVelocity().Size();
+	}
+	else
+	{
+		velocity = 0;
 	}
 }
 

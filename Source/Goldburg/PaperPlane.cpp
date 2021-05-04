@@ -29,7 +29,7 @@ void APaperPlane::Tick(float DeltaTime)
 			running = false;
 			GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Stop")));
 		}
-		Body->SetPhysicsLinearVelocity((Body->GetRightVector() * velocity) + (FVector(0, 0, -1) * gravity));
+		Body->SetPhysicsLinearVelocity((Body->GetRightVector() * ForwardVelocity) + (FVector(0, 0, -1) * gravity));
 		if (Body->GetComponentLocation().X < BoundsXMinus)
 		{
 			running = false;
@@ -46,8 +46,13 @@ void APaperPlane::Tick(float DeltaTime)
 		{
 			running = false;
 		}
+		velocity = Mesh->GetComponentVelocity().Size();
 		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Vel: %f"), VelSave.Y));
 		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("X: %f"), GetActorLocation().X));
+	}
+	else
+	{
+		velocity = 0;
 	}
 }
 

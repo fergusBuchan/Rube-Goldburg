@@ -92,7 +92,7 @@ void ATypeCar::Tick(float DeltaTime)
 				{
 					Mesh->SetPhysicsLinearVelocity((Mesh->GetForwardVector() * temp.X) + (Mesh->GetUpVector() * temp.Z), false);
 				}
-				Mesh->AddForce(Mesh->GetForwardVector() * velocity);
+				Mesh->AddForce(Mesh->GetForwardVector() * ForwardVelocity);
 				Mesh->AddForce(Mesh->GetUpVector() * -driftOffset);
 				//Mesh->AddForce(Mesh->GetRightVector() * -temp.Y); 
 
@@ -109,12 +109,16 @@ void ATypeCar::Tick(float DeltaTime)
 				Wheel6->AddLocalRotation(FRotator(wheelRot, 0, 0));
 			}
 		}
-		
+		velocity = Mesh->GetComponentVelocity().Size();
 		
 		if (Mesh->GetComponentLocation().Z < 0)
 		{
 			running = false;
 		}
+	}
+	else
+	{
+		velocity = 0;
 	}
 }
 
