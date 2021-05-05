@@ -46,7 +46,7 @@ void ATypeCar::Tick(float DeltaTime)
 	if (running)
 	{
 		FVector rayStart = Mesh->GetComponentLocation() + (Mesh->GetUpVector() * RayOffset);
-		FVector rayEnd = rayStart + (GetActorUpVector() * RayLenght);
+		FVector rayEnd = rayStart + (Mesh->GetUpVector() * RayLenght);
 		//DrawDebugLine(GetWorld(), rayStart, rayEnd, FColor::Red, false, 5.0f);
 		FHitResult* hit = new FHitResult();
 		if (GetWorld()->LineTraceSingleByChannel(*hit, rayStart, rayEnd, ECollisionChannel::ECC_Visibility))
@@ -92,7 +92,7 @@ void ATypeCar::Tick(float DeltaTime)
 				{
 					Mesh->SetPhysicsLinearVelocity((Mesh->GetForwardVector() * temp.X) + (Mesh->GetUpVector() * temp.Z), false);
 				}
-				Mesh->AddForce(Mesh->GetForwardVector() * velocity);
+				Mesh->AddForce(Mesh->GetForwardVector() * ForwardVelocity);
 				Mesh->AddForce(Mesh->GetUpVector() * -driftOffset);
 				//Mesh->AddForce(Mesh->GetRightVector() * -temp.Y); 
 
@@ -109,12 +109,16 @@ void ATypeCar::Tick(float DeltaTime)
 				Wheel6->AddLocalRotation(FRotator(wheelRot, 0, 0));
 			}
 		}
-		
+		velocity = Mesh->GetComponentVelocity().Size();
 		
 		if (Mesh->GetComponentLocation().Z < 0)
 		{
 			running = false;
 		}
+	}
+	else
+	{
+		velocity = 0;
 	}
 }
 

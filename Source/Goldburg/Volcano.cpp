@@ -42,6 +42,7 @@ void AVolcano::Launch()
 {
 	launched = true;
 	timer = LifeTime;
+	IsActivated = true;
 }
 
 void AVolcano::Reset()

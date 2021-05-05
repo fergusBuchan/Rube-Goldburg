@@ -107,6 +107,7 @@ void APC::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
     controller->GetInputTouchState(ETouchIndex::Touch1, NewTouch.X, NewTouch.Y, clicked);
+	controller->GetInputTouchState(ETouchIndex::Touch2, NewTouch2.X, NewTouch2.Y, clicked2);
 
 	VectorRight = Camera->GetRightVector();
 	VectorUp = Camera->GetUpVector();
@@ -143,11 +144,43 @@ void APC::Tick(float DeltaTime)
 		{
 			if (!following || !playing || ActiveObjects[tracked] != NULL)
 			{
-				FVector2D Delta = NewTouch - LastTouch;
-				FVector Xoffset = GetActorRightVector() * -Delta.X; //FVector(DeltaTouch.X, 0.0f, 0.0f);
-				AddActorWorldOffset(Xoffset);
-				FVector Yoffset = GetActorForwardVector() * Delta.Y; //FVector(DeltaTouch.X, 0.0f, 0.0f);
-				AddActorWorldOffset(Yoffset);
+				if (clicked2) {//if the player has two fingers on the screen
+
+					GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("crazy diamond")));
+
+					FVector2D Delta1 = NewTouch - LastTouch;
+					FVector2D Delta2 = NewTouch2 - LastTouch2;
+
+					FVector2D TotalDelta = Delta1 + Delta2;
+
+					if (TotalDelta.Size()*DeltaTime > 0.05) {
+						if (TotalDelta.Size() < Delta1.Size()) {// if adding the vectors makes the resultant vector smaller, the vectors must be oppiste each other
+							FVector2D NewDelta = NewTouch - NewTouch2;
+							FVector2D LastDelta = LastTouch - LastTouch2;
+							if (NewDelta.Size() > LastDelta.Size()) { // if the distance between the fingers is increaceing
+								Zoom(TotalDelta.Size() * -2.0 * DeltaTime);
+							}
+							else { // the distance is decreacing
+								Zoom(TotalDelta.Size() * 2.0 * DeltaTime);
+							}
+							GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("zoom")));
+
+						}
+						else {//otherwise we assume they want to move up/down
+							FVector Xoffset = GetActorUpVector() * (TotalDelta.Y / 2);
+							GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("up/down")));
+							SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z + (DeltaTime * (TotalDelta.Y * 25))));
+						}
+					}
+					LastTouch2 = NewTouch2;
+				}
+				else {
+					FVector2D Delta = NewTouch - LastTouch;
+					FVector Xoffset = GetActorRightVector() * -Delta.X; //FVector(DeltaTouch.X, 0.0f, 0.0f);
+					AddActorWorldOffset(Xoffset);
+					FVector Yoffset = GetActorForwardVector() * Delta.Y; //FVector(DeltaTouch.X, 0.0f, 0.0f);
+					AddActorWorldOffset(Yoffset);
+				}
 			}
 			LastTouch = NewTouch;
 		}
@@ -156,7 +189,7 @@ void APC::Tick(float DeltaTime)
 		controller->GetHitResultUnderFinger(ETouchIndex::Touch1, ECollisionChannel::ECC_GameTraceChannel3, false, Hit);
 		SelectedTemp2 = Cast<AMachineObject>(Hit.GetActor());
 	}
-	if (SelectedObject != NULL)
+	if (SelectedObject != NULL && !HideUI)
 	{
 		SelectedPos = SelectedObject->position;
 		AVolcano* vol = Cast<AVolcano>(SelectedObject);
@@ -213,6 +246,7 @@ void APC::Tick(float DeltaTime)
 		RotACIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		DuplicateIMG->SetVisibility(false);
 		DuplicateIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		HideUI = false;
 	}
 	if (playing)
 	{
@@ -324,6 +358,9 @@ void APC::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 				Selected = false;
 			}
 		}
+	}
+	if (FingerIndex == ETouchIndex::Touch2) {
+		controller->GetInputTouchState(ETouchIndex::Touch2, LastTouch2.X, LastTouch2.Y, clicked2);
 	}
 }
 
@@ -520,6 +557,20 @@ void APC::ZoomOut()
 	}
 }
 
+void APC::Zoom(float zoomDist)
+{
+	if (Fixed) {
+		if ((CameraBoom->TargetArmLength + zoomDist < maxFixedArmLenght) && (CameraBoom->TargetArmLength + zoomDist > minArmLenght)) {
+			CameraBoom->TargetArmLength += zoomDist;
+		}
+	}
+	else {
+		if ((CameraBoom->TargetArmLength + zoomDist < maxArmLenght) && (CameraBoom->TargetArmLength + zoomDist > minArmLenght)) {
+			CameraBoom->TargetArmLength += zoomDist;
+		}
+	}
+}
+
 //get image of each object
 UTexture2D* APC::getImg(int Index)
 {
@@ -577,6 +628,21 @@ void APC::setObjectChannel(int Channel)
 //Spawn object
 void APC::Spawn(int index)
 {
+	HideUI = true;
+
+	MoveIMG->SetVisibility(false);
+	MoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	LargeMoveIMG->SetVisibility(false);
+	LargeMoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	LiftIMG->SetVisibility(false);
+	LiftIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	RotCIMG->SetVisibility(false);
+	RotCIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	RotACIMG->SetVisibility(false);
+	RotACIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	DuplicateIMG->SetVisibility(false);
+	DuplicateIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
 	DeselectObject();
 	//Spawn selected object
 	SelectedObject = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[index]));
@@ -617,11 +683,30 @@ void APC::Spawn(int index)
 
 void APC::Duplicate()
 {
+	HideUI = true;
+	
+	MoveIMG->SetVisibility(false);
+	MoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	LargeMoveIMG->SetVisibility(false);
+	LargeMoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	LiftIMG->SetVisibility(false);
+	LiftIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	RotCIMG->SetVisibility(false);
+	RotCIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	RotACIMG->SetVisibility(false);
+	RotACIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	DuplicateIMG->SetVisibility(false);
+	DuplicateIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
 	int index = SelectedObject->ObjectTypeIndex;
 	FVector pos = SelectedObject->GetActorLocation();
+	FRotator rot = SelectedObject->GetActorRotation();
 	DeselectObject();
+
+	
 	//Spawn selected object
 	SelectedObject = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[index]));
+
 	if (SelectedObject != NULL)
 	{
 		pickerOpen = false;
@@ -639,6 +724,7 @@ void APC::Duplicate()
 		//}
 		//SelectedObject->Spawn();
 		SelectedObject->SetActorLocation(pos);
+		SelectedObject->SetActorRotation(rot);
 		SelectedObject->LastValidPos = pos;
 		if (SelectedObject->Active == true)
 		{

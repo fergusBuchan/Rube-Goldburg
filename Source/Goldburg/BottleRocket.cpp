@@ -71,6 +71,7 @@ void ABottleRocket::Launch()
 	Lid->SetSimulatePhysics(true);
 	Mesh->AddImpulse(-Mesh->GetUpVector()*launchImpulse);
 	Lid->AddImpulse(Mesh->GetUpVector() * (launchImpulse/2));
+	IsActivated = true;
 }
 
 void ABottleRocket::Reset()

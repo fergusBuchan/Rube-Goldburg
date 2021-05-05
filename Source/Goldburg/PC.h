@@ -33,7 +33,7 @@ public:
 	UPROPERTY(EditAnywhere)
 		class UCameraComponent* Camera;
 	
-	
+	bool HideUI;
 	UPROPERTY(EditAnywhere)
 		class UStaticMeshComponent* MoveIMG;
 	UPROPERTY(EditAnywhere)
@@ -72,6 +72,8 @@ public:
 		void ZoomIn();
 	UFUNCTION(BlueprintCallable)
 		void ZoomOut();
+	UFUNCTION()
+		void Zoom(float ZoomDist);
 
 	UFUNCTION(BlueprintCallable)
 		void IncreaseHeight(bool rising);
@@ -136,6 +138,8 @@ public:
 	
 
 	bool clicked;
+	bool clicked2;
+
 	UPROPERTY(BlueprintReadWrite)
 		bool ObjectMenuOpen;
 
@@ -145,6 +149,8 @@ public:
 
 	FVector2D LastTouch;
 	FVector2D NewTouch;
+	FVector2D LastTouch2;
+	FVector2D NewTouch2;
 
 	
 

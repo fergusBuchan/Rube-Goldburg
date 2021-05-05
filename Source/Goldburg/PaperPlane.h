@@ -17,11 +17,13 @@ public:
 	UPROPERTY(EditAnywhere)
 		class USkeletalMeshComponent* Body;
 
+
 	APaperPlane();
 	void Tick(float DeltaTime) override;
 	void Launch() override;
 	void Activate() override;
 	void Reset() override;
+
 	bool running;
 	UPROPERTY(EditAnywhere)
 		float frontRay;
@@ -29,7 +31,7 @@ public:
 		float Down;
 	FVector direction;
 	UPROPERTY(EditAnywhere)
-		float velocity;
+		float ForwardVelocity;
 	UPROPERTY(EditAnywhere)
 		float gravity;
 

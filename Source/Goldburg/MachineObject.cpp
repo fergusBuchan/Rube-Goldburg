@@ -41,6 +41,15 @@ void AMachineObject::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	
 	position = GetActorLocation();
+
+	if (Mesh->IsSimulatingPhysics())
+	{
+		velocity = Mesh->GetComponentVelocity().Size();
+	}
+	else
+	{
+		velocity = 0;
+	}
 }
 
 void AMachineObject::Select(bool select)
