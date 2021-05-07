@@ -23,23 +23,28 @@ ATriggerButton::ATriggerButton()
 
 void ATriggerButton::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (disableOther)
+	if (!pressed)
 	{
-		AMovingActor* t = Cast<AMovingActor>(OtherActor);
-		if (t != NULL)
+		if (disableOther)
 		{
-			if (t->Type != 2)
-				t->running = false;
+			AMovingActor* t = Cast<AMovingActor>(OtherActor);
+			if (t != NULL)
+			{
+				if (t->Type != 2)
+					t->running = false;
+			}
+			ATypeCar* u = Cast<ATypeCar>(OtherActor);
+			if (u != NULL)
+			{
+				u->running = false;
+			}
 		}
-		ATypeCar* u = Cast<ATypeCar>(OtherActor);
-		if (u != NULL)
-		{
-			u->running = false;
-		}
-	}
-		ActivatorBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	
+
+		//ActivatorBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
 		Press();
+		pressed = true;
+	}
 }
 
 
@@ -49,6 +54,7 @@ void ATriggerButton::Activate()
 	ActivatorBox->SetNotifyRigidBodyCollision(true);
 	ActivatorBox->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	ActivatorBox->BodyInstance.SetCollisionProfileName("BlockAllDynamic");
+	pressed = false;
 }
 
 void ATriggerButton::Reset()

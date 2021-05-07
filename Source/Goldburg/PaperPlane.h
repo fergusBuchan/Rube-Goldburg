@@ -23,6 +23,8 @@ public:
 	void Launch() override;
 	void Activate() override;
 	void Reset() override;
+	
+
 
 	bool running;
 	UPROPERTY(EditAnywhere)

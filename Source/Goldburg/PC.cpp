@@ -18,9 +18,9 @@
 #include "Styling/SlateBrush.h"
 #include "TriggerButton.h"
 #include "Activator.h"
-#include "Mover.h"
 #include "Misc/App.h"
 #include "Volcano.h"
+#include "DominoSet.h"
 // Sets default values
 APC::APC()
 {
@@ -189,7 +189,7 @@ void APC::Tick(float DeltaTime)
 		controller->GetHitResultUnderFinger(ETouchIndex::Touch1, ECollisionChannel::ECC_GameTraceChannel3, false, Hit);
 		SelectedTemp2 = Cast<AMachineObject>(Hit.GetActor());
 	}
-	if (SelectedObject != NULL && !HideUI)
+	if (SelectedObject != NULL && !HideUI && !(SelectedObject->GetActorLocation().Z < 1000))
 	{
 		SelectedPos = SelectedObject->position;
 		AVolcano* vol = Cast<AVolcano>(SelectedObject);
@@ -375,8 +375,6 @@ void APC::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 		//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Duplicating stop")));
 		if ((FVector::Dist(touchLoc, Location) < deselectDist))
 		{
-			
-
 			//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Duplicating spawn")));
 			Duplicate();
 			duplicating = false;
@@ -679,6 +677,7 @@ void APC::Spawn(int index)
 			StaticObjects.Add(SelectedObject);
 		}
 	}
+	HideUI = true;
 }
 
 void APC::Duplicate()
@@ -722,7 +721,7 @@ void APC::Duplicate()
 		//{
 		//	SelectedObject->Move(hit->Location);
 		//}
-		//SelectedObject->Spawn();
+		SelectedObject->Spawn();
 		SelectedObject->SetActorLocation(pos);
 		SelectedObject->SetActorRotation(rot);
 		SelectedObject->LastValidPos = pos;
@@ -743,6 +742,7 @@ void APC::Duplicate()
 			StaticObjects.Add(SelectedObject);
 		}
 	}
+	HideUI = true;
 }
 
 void APC::Spawn(FSaveStruct inputObject) {
@@ -899,10 +899,10 @@ void APC::DeleteObject()
 			}
 		}
 		//Delete object
-		AMover* temp = Cast<AMover>(SelectedObject);
+		ADominoSet* temp = Cast<ADominoSet>(SelectedObject);
 		if (temp != NULL)
 		{
-			temp->DestroyVehicle();
+			temp->DestroyDominoes();
 		}
 		SelectedObject->Destroy();
 		DeselectObject();

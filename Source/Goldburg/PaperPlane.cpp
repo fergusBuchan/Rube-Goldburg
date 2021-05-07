@@ -27,9 +27,12 @@ void APaperPlane::Tick(float DeltaTime)
 		if (GetWorld()->LineTraceSingleByChannel(*hit, rayEnd1, rayEnd2, ECollisionChannel::ECC_Visibility))
 		{
 			running = false;
-			GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Stop")));
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Stop")));
 		}
-		Body->SetPhysicsLinearVelocity((Body->GetRightVector() * ForwardVelocity) + (FVector(0, 0, -1) * gravity));
+		else
+		{
+			Body->SetPhysicsLinearVelocity((Body->GetRightVector() * ForwardVelocity) + (FVector(0, 0, -1) * gravity));
+		}
 		if (Body->GetComponentLocation().X < BoundsXMinus)
 		{
 			running = false;
@@ -49,10 +52,6 @@ void APaperPlane::Tick(float DeltaTime)
 		velocity = Mesh->GetComponentVelocity().Size();
 		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Vel: %f"), VelSave.Y));
 		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("X: %f"), GetActorLocation().X));
-	}
-	else
-	{
-		velocity = 0;
 	}
 }
 
@@ -81,4 +80,3 @@ void APaperPlane::Reset()
 	Body->AttachToComponent(RootComponent, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 	Body->SetRelativeLocationAndRotation(ResetPosition, ResetRotation);
 }
-

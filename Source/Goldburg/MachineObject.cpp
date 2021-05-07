@@ -171,11 +171,6 @@ void AMachineObject::Reset()
 //Spawn object
 void AMachineObject::Spawn()
 {
-	//Because of tick delay with UMG buttons, must be spawned out of sight, otherwise it would spawn at 0,0,0
-	//Object then snaps to finger at next tick, or when finget drags from button to floor
-	//space outside of scene
-	SetActorLocation(FVector(-1000000, -10000000000, -10000));
-	LastValidPos = FVector(-1000000, -10000000000, -10000);
 	linkChannel = 0;
 	linked = false;
 }
