@@ -9,16 +9,16 @@
 /**
  * 
  */
-USTRUCT()
+USTRUCT(Blueprintable)
 struct FSaveStruct
 {
     GENERATED_BODY()
 public:
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int objectIndex;
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FVector objectPosition;
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FRotator objectRotation;
 
 };
@@ -28,7 +28,7 @@ class GOLDBURG_API UWorldSave : public USaveGame
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 		TArray<FSaveStruct> SavedObjects;
 	UPROPERTY(BlueprintReadWrite)
 		FString SaveName;

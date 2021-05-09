@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "ObjectSave.h"
 #include "WorldSave.h"
+#include "MachineObject.h"
 #include "GameFramework/Character.h"
 #include "PC.generated.h"
 
@@ -100,8 +101,12 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void Spawn(int index);
-	void Duplicate();
 		void Spawn(FSaveStruct inputObject);
+	UFUNCTION(BlueprintCallable)
+		void AddObject(AMachineObject* InputPointer);
+	UFUNCTION(BlueprintCallable)
+		void Duplicate();
+	
 
 
 
@@ -225,7 +230,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString currentSave;
 	UFUNCTION(BlueprintCallable)
-		void Load(FString saveName);
+		bool Load(FString saveName);
 	UFUNCTION(BlueprintCallable)
 		void Save(FString saveName);
 	UFUNCTION(BlueprintCallable)

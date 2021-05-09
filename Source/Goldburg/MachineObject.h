@@ -67,10 +67,12 @@ public:
 		int TabNum;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 		bool IsActivated;
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 		int ObjectTypeIndex;
 
+	UPROPERTY(EditAnywhere)
 	bool linked;
+	UPROPERTY(EditAnywhere)
 	int linkChannel = 0;
 
 	UPROPERTY(BlueprintReadOnly)

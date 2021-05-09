@@ -1,10 +1,10 @@
 package com.epicgames.ue4;
 
-import com.ChainReaction.Golberg.OBBDownloaderService;
-import com.ChainReaction.Golberg.DownloaderActivity;
+import com.YourCompany.Goldburg.OBBDownloaderService;
+import com.YourCompany.Goldburg.DownloaderActivity;
 import android.app.Activity;
 import com.google.android.vending.expansion.downloader.Helpers;
-import com.ChainReaction.Golberg.OBBData;
+import com.YourCompany.Goldburg.OBBData;
 
 
 public class DownloadShim
