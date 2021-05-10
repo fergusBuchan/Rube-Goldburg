@@ -44,6 +44,8 @@ public:
 	UPROPERTY(BlueprintReadOnly, EditAnywhere)
 		float MinHeight;
 	UPROPERTY(EditAnywhere)
+		float MaxHeight;
+	UPROPERTY(EditAnywhere)
 	float height;
 	UPROPERTY(EditAnywhere)
 		UTexture2D* OBJIMG;

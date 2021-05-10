@@ -83,6 +83,14 @@ void AMachineObject::Move(FVector FingerLoc)
 		{
 			X = FingerLoc.X + X;
 		}
+		if (X > 600)
+		{
+			X = 600;
+		}
+		if (X < -500)
+		{
+			X = -500;
+		}
 		Y = abs(fmod(FingerLoc.Y, 100)); 
 		if (Y > 50)
 		{
@@ -95,6 +103,14 @@ void AMachineObject::Move(FVector FingerLoc)
 		else
 		{
 			Y = FingerLoc.Y + Y;
+		}
+		if (Y > 600)
+		{
+			Y = 600;
+		}
+		if (Y < -1100)
+		{
+			Y = -1100;
 		}
 		SetActorLocation(FVector(X, Y, GetActorLocation().Z));
 		//If object height is below minimum height
@@ -128,8 +144,16 @@ void AMachineObject::Lift(float delta)
 	heightDelta -= delta;
 	if (heightDelta >= 10)
 	{
-		AddActorLocalOffset(FVector(0, 0, 10));
-		heightDelta -= 10;
+		if (GetActorLocation().Z + 10 <= MaxHeight)
+		{
+			AddActorLocalOffset(FVector(0, 0, 10));
+				heightDelta -= 10;
+		}
+		else
+		{
+			SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, MaxHeight));
+			heightDelta = 0;
+		}
 	}
 	else if (heightDelta <= -10)
 	{

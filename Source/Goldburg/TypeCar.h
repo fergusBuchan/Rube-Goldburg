@@ -33,6 +33,7 @@ public:
     void Activate() override;
     void Launch() override;
     void Reset() override;
+    UPROPERTY(BlueprintReadOnly)
     bool running;
     UPROPERTY(EditAnywhere)
         float ForwardVelocity;

@@ -49,6 +49,7 @@ void ARocket::Launch()
 void ARocket::Activate()
 {
 	Body->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	Body->SetSimulatePhysics(true);
 	if (!linked)
 	{
 		Launch();

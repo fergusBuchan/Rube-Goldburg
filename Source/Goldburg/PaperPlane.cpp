@@ -18,37 +18,28 @@ void APaperPlane::Tick(float DeltaTime)
 	position = GetActorLocation();
 	if (running)
 	{
-		FVector rayStart1 = Body->GetSocketLocation(FName("Front"));
-		FVector rayEnd1 = rayStart1 + (Body->GetRightVector() * frontRay);
 		FVector rayStart2 = Body->GetSocketLocation(FName("Back"));
 		FVector rayEnd2 = rayStart2 + (Body->GetUpVector() * Down);
-		//DrawDebugLine(GetWorld(), rayEnd1, rayEnd2, FColor::Red, false, 5.0f);
+		//DrawDebugLine(GetWorld(), rayStart2, rayEnd2, FColor::Red, false, 5.0f);
 		FHitResult* hit = new FHitResult();
-		if (GetWorld()->LineTraceSingleByChannel(*hit, rayEnd1, rayEnd2, ECollisionChannel::ECC_Visibility))
+		if (GetWorld()->LineTraceSingleByChannel(*hit, (rayStart2), rayEnd2, ECollisionChannel::ECC_Visibility))
 		{
 			running = false;
 			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Stop")));
 		}
-		else
+		FVector rayStart1 = Body->GetSocketLocation(FName("Front"));
+		FVector rayEnd1 = rayStart1+ (Body->GetRightVector() * frontRay);
+		//DrawDebugLine(GetWorld(), rayStart1, rayEnd1, FColor::Red, false, 5.0f);
+		FHitResult* frontHit = new FHitResult();
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Ray2")));
+		if (GetWorld()->LineTraceSingleByChannel(*frontHit, (rayStart1), rayEnd1, ECollisionChannel::ECC_Visibility))
 		{
-			Body->SetPhysicsLinearVelocity((Body->GetRightVector() * ForwardVelocity) + (FVector(0, 0, -1) * gravity));
-		}
-		if (Body->GetComponentLocation().X < BoundsXMinus)
-		{
+			//DrawDebugLine(GetWorld(), rayStart1, frontHit->Location, FColor::Red, false, 5.0f);
 			running = false;
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Stop")));
 		}
-		if (Body->GetComponentLocation().X > BoundsXPlus)
-		{
-			running = false;
-		}
-		if (Body->GetComponentLocation().Y < BoundsYMinus)
-		{
-			running = false;
-		}
-		if (Body->GetComponentLocation().Y > BoundsYPlus)
-		{
-			running = false;
-		}
+		Body->SetPhysicsLinearVelocity((Body->GetRightVector() * ForwardVelocity) + (FVector(0, 0, -1) * gravity));
+		
 		velocity = Mesh->GetComponentVelocity().Size();
 		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Vel: %f"), VelSave.Y));
 		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("X: %f"), GetActorLocation().X));

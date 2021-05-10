@@ -111,7 +111,11 @@ void APC::Tick(float DeltaTime)
 
 	VectorRight = Camera->GetRightVector();
 	VectorUp = Camera->GetUpVector();
-
+	if (SelectedObject != NULL)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Z: %f"), SelectedObject->GetActorLocation().Z));
+		SelectedZ = SelectedObject->GetActorLocation().Z;
+	}
 	if (clicked)
 	{
 		if (Selected && ((moving || lifting)||duplicating))
@@ -122,14 +126,14 @@ void APC::Tick(float DeltaTime)
 				{
 					FHitResult* hit = new FHitResult();
 					controller->GetHitResultUnderFinger(ETouchIndex::Touch1, ECollisionChannel::ECC_GameTraceChannel2, false, *hit);
-					if (hit != nullptr)
+					if (hit != nullptr && hit->Normal == FVector(0, 0, 1))
 					{
 						FVector newloc = hit->Location - moveOffset;
 						SelectedObject->Move(newloc);
 					}
 					else
 					{
-						SelectedObject->Move(FVector(0,0,0));
+						SelectedObject->Move(SelectedObject->LastValidPos);
 					}
 				}
 				else if (lifting)
@@ -180,6 +184,23 @@ void APC::Tick(float DeltaTime)
 					AddActorWorldOffset(Xoffset);
 					FVector Yoffset = GetActorForwardVector() * Delta.Y; //FVector(DeltaTouch.X, 0.0f, 0.0f);
 					AddActorWorldOffset(Yoffset);
+
+					if (GetActorLocation().X < minX)
+					{
+						SetActorLocation(FVector(minX, GetActorLocation().Y, GetActorLocation().Z));
+					}
+					if (GetActorLocation().X > maxX)
+					{
+						SetActorLocation(FVector(maxX, GetActorLocation().Y, GetActorLocation().Z));
+					}
+					if (GetActorLocation().Y < minY)
+					{
+						SetActorLocation(FVector(GetActorLocation().X, minY, GetActorLocation().Z));
+					}
+					if (GetActorLocation().Y > maxY)
+					{
+						SetActorLocation(FVector(GetActorLocation().X, maxY, GetActorLocation().Z));
+					}
 				}
 			}
 			LastTouch = NewTouch;
@@ -198,12 +219,16 @@ void APC::Tick(float DeltaTime)
 			LargeMoveIMG->SetVisibility(true);
 			LargeMoveIMG->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 			LargeMoveIMG->SetWorldLocation(FVector(SelectedPos.X, SelectedPos.Y, 1021));//21 is just above current floor height
+			MoveIMG->SetVisibility(false);
+			MoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		}
 		else
 		{
 			MoveIMG->SetVisibility(true);
 			MoveIMG->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 			MoveIMG->SetWorldLocation(FVector(SelectedPos.X, SelectedPos.Y, 1021));//21 is just above current floor height
+			LargeMoveIMG->SetVisibility(false);
+			LargeMoveIMG->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		}
 		if (GetControlRotation().Pitch < 285 && GetControlRotation().Pitch > 255)
 		{
@@ -230,6 +255,14 @@ void APC::Tick(float DeltaTime)
 		DuplicateIMG->SetVisibility(true); 
 		DuplicateIMG->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 		DuplicateIMG->SetWorldLocation(SelectedPos + (VectorRight * -70) + (VectorUp * SelectedObject->height));
+		if (SelectedObject->Active)
+		{
+			isActive = true;
+		}
+		else
+		{
+			isActive = false;
+		}
 	}
 	else
 	{

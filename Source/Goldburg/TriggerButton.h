@@ -18,7 +18,11 @@ public:
 
 	UPROPERTY(EditAnywhere)
 		class UBoxComponent* ActivatorBox;
+	UPROPERTY(EditAnywhere)
+		class USoundBase* Audio;
 
+	UPROPERTY(EditAnywhere)
+		float AudioModifier;
 
 	UFUNCTION()
 		void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);

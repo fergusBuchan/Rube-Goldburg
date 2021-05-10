@@ -111,7 +111,7 @@ void ATypeCar::Tick(float DeltaTime)
 		}
 		velocity = Mesh->GetComponentVelocity().Size();
 		
-		if (Mesh->GetComponentLocation().Z < 0)
+		if (Mesh->GetComponentLocation().Z < 1000)
 		{
 			running = false;
 		}

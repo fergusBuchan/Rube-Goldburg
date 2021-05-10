@@ -32,8 +32,13 @@ public:
 		class USpringArmComponent* CameraBoom;
 	UPROPERTY(EditAnywhere)
 		class UCameraComponent* Camera;
-	
+
+	UPROPERTY(BlueprintReadOnly)
 	bool HideUI;
+
+	UPROPERTY(BlueprintReadOnly)
+		float SelectedZ;
+
 	UPROPERTY(EditAnywhere)
 		class UStaticMeshComponent* MoveIMG;
 	UPROPERTY(EditAnywhere)
@@ -84,7 +89,15 @@ public:
 	UPROPERTY(EditAnywhere)
 		float heightDelta;
 	
-	
+	UPROPERTY(EditAnywhere)
+		float minX;
+	UPROPERTY(EditAnywhere)
+		float minY;
+	UPROPERTY(EditAnywhere)
+		float maxX;
+	UPROPERTY(EditAnywhere)
+		float maxY;
+
 
 
 	UFUNCTION(BlueprintCallable)
@@ -202,6 +215,8 @@ public:
 	
 	UPROPERTY(BlueprintReadWrite)
 		bool objSelected;
+	UPROPERTY(BlueprintReadOnly)
+		bool isActive;
 	    bool Selected;
 
 	bool lifting;

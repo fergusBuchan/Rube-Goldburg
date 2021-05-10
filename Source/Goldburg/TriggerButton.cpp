@@ -10,6 +10,7 @@
 #include "DrawDebugHelpers.h"
 #include "MovingActor.h"
 #include "TypeCar.h"
+#include "PC.h"
 
 ATriggerButton::ATriggerButton()
 {
@@ -19,6 +20,8 @@ ATriggerButton::ATriggerButton()
 	ActivatorBox->BodyInstance.SetCollisionProfileName("BlockAllDynamic");
 	ActivatorBox->AttachTo(Mesh);
 	ActivatorBox->OnComponentHit.AddDynamic(this, &ATriggerButton::OnHit);
+
+	AudioModifier = 1.0f;
 }
 
 void ATriggerButton::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
@@ -41,7 +44,16 @@ void ATriggerButton::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPr
 		}
 
 		//ActivatorBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-
+		if (Audio != NULL)
+		{
+			APC* a = Cast<APC>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+			float volume = 1.0f * AudioModifier;
+			if (a != NULL)
+			{
+				volume = (a->SFXVolume / 100) * AudioModifier;
+			}
+			UGameplayStatics::PlaySoundAtLocation(this, Audio, Mesh->GetComponentLocation(), volume);
+		}
 		Press();
 		pressed = true;
 	}
