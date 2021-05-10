@@ -99,6 +99,21 @@ void APC::BeginPlay()
 	tracked = 0;
 	playing = false;
 	pickerOpen = false;
+
+	TArray<AActor*> tempObjArray;
+	UGameplayStatics::GetAllActorsOfClass(this->GetWorld(), AMachineObject::StaticClass(), tempObjArray);
+	for (int i = 0; i < tempObjArray.Num(); i++) {
+		AddObject(Cast<AMachineObject>(tempObjArray[i]));
+	}
+	if (GetWorld()->GetName() == "DefaultSave1") {
+		currentSave = "save 1";
+	}
+	if (GetWorld()->GetName() == "DefaultSave2") {
+		currentSave = "save 2";
+	}
+	if (GetWorld()->GetName() == "DefaultSave3") {
+		currentSave = "save 3";
+	}
 }
 
 // Called every frame
@@ -810,31 +825,67 @@ void APC::Spawn(FSaveStruct inputObject) {
 	}
 }
 
-void APC::Load(FString saveName) {
+void APC::AddObject(AMachineObject* InputPointer) {
+
+	UClass* inputClass = InputPointer->GetClass();
+
+
+
+	//Spawn input object
+
+	if (InputPointer != NULL)
+	{
+		for (int i = 0; i < GameObjects.Num(); i++) {
+			if (GameObjects[i] == inputClass) {
+				InputPointer->ObjectTypeIndex = i;
+			}
+		}
+
+
+		if (InputPointer->Active == true) {
+			AActivator* temp = Cast<AActivator>(InputPointer);
+			if (temp != NULL)
+			{
+				Activators.Add(temp);
+			}
+			else
+			{
+				ActiveObjects.Add(InputPointer);
+			}
+		}
+		else {
+			StaticObjects.Add(InputPointer);
+		}
+	}
+}
+
+bool APC::Load(FString saveName) {
 
 	SelectedObject->Select(false);
 	//some weird bugs happen with the seleceted object
-
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("Test")));
 	ClearScene();
 	if (UWorldSave* loadingSave = Cast<UWorldSave>(UGameplayStatics::LoadGameFromSlot(saveName, 0)))
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("load sucsessful")));
-	
+
 		loadingSave->SaveName = saveName;
 		for (int i = 0; i < loadingSave->SavedObjects.Num(); i++) {
 			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("load object")));
 			loadingSave->SaveName = saveName;
 			Spawn(loadingSave->SavedObjects[i]);
 		}
+		currentSave = saveName;
+		return true;
+
 	}
 	else {
 		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("load unsucsessful")));
+		currentSave = saveName;
+		return false;
 	}
 
-	currentSave = saveName;
 }
-
 void APC::Save(FString saveName) {
 
 	SelectedObject->Select(false);
