@@ -72,7 +72,9 @@ public:
 	UPROPERTY()
 		int ObjectTypeIndex;
 
+	UPROPERTY(EditAnywhere)
 	bool linked;
+	UPROPERTY(EditAnywhere)
 	int linkChannel = 0;
 
 	UPROPERTY(BlueprintReadOnly)

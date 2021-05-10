@@ -113,8 +113,12 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void Spawn(int index);
-	void Duplicate();
 		void Spawn(FSaveStruct inputObject);
+	UFUNCTION(BlueprintCallable)
+		void AddObject(AMachineObject* InputPointer);
+	UFUNCTION()
+	void Duplicate();
+		
 
 
 
@@ -240,7 +244,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString currentSave;
 	UFUNCTION(BlueprintCallable)
-		void Load(FString saveName);
+		bool Load(FString saveName);
 	UFUNCTION(BlueprintCallable)
 		void Save(FString saveName);
 	UFUNCTION(BlueprintCallable)
