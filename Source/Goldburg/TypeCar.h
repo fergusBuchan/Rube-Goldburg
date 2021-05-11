@@ -58,4 +58,6 @@ public:
 
     float StopCounter;
     float bestVel;
+
+    FVector lastPos;
 };

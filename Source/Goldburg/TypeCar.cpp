@@ -115,6 +115,7 @@ void ATypeCar::Tick(float DeltaTime)
 		{
 			running = false;
 		}
+		lastPos = Mesh->GetComponentLocation();
 	}
 	else
 	{

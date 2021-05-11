@@ -856,6 +856,12 @@ void APC::AddObject(AMachineObject* InputPointer) {
 			else
 			{
 				ActiveObjects.Add(InputPointer);
+				ADominoSet* temp2 = Cast<ADominoSet>(InputPointer);
+				if (temp2 != NULL)
+				{
+					
+					temp2->Spawn();
+				}
 			}
 		}
 		else {
