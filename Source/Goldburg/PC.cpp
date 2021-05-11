@@ -800,12 +800,15 @@ void APC::Spawn(FSaveStruct inputObject) {
 	AMachineObject* newObject = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[inputObject.objectIndex]));
 	if (newObject != NULL)
 	{
+
+
 		newObject->Spawn();
 		newObject->SetActorLocation(inputObject.objectPosition);
 
 		newObject->SetActorRotation(inputObject.objectRotation);
 		newObject->ObjectTypeIndex = inputObject.objectIndex;
-
+		newObject->linked = inputObject.linked;
+		newObject->linkChannel = inputObject.linkChannel;
 
 
 		if (newObject->Active == true) {
@@ -902,6 +905,8 @@ void APC::Save(FString saveName) {
 		objPtr.objectPosition = StaticObjects[i]->GetActorLocation();
 		objPtr.objectRotation = StaticObjects[i]->GetActorRotation();
 		objPtr.objectIndex = StaticObjects[i]->ObjectTypeIndex;
+		objPtr.linked = StaticObjects[i]->linked;
+		objPtr.linkChannel = StaticObjects[i]->linkChannel;
 
 		savePtr->SavedObjects.Push(objPtr);
 	}
@@ -911,6 +916,8 @@ void APC::Save(FString saveName) {
 		objPtr.objectPosition = ActiveObjects[i]->GetActorLocation();
 		objPtr.objectRotation = ActiveObjects[i]->GetActorRotation();
 		objPtr.objectIndex = ActiveObjects[i]->ObjectTypeIndex;
+		objPtr.linked = ActiveObjects[i]->linked;
+		objPtr.linkChannel = ActiveObjects[i]->linkChannel;
 
 		savePtr->SavedObjects.Push(objPtr);
 	}
@@ -920,6 +927,8 @@ void APC::Save(FString saveName) {
 		objPtr.objectPosition = Activators[i]->GetActorLocation();
 		objPtr.objectRotation = Activators[i]->GetActorRotation();
 		objPtr.objectIndex = Activators[i]->ObjectTypeIndex;
+		objPtr.linked = Activators[i]->linked;
+		objPtr.linkChannel = Activators[i]->linkChannel;
 
 		savePtr->SavedObjects.Push(objPtr);
 	}
@@ -932,6 +941,7 @@ void APC::Save(FString saveName) {
 		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("save failed")));
 	}
 }
+
 
 void APC::DeleteSave(FString saveName) {
 	UGameplayStatics::DeleteGameInSlot(saveName,0);
