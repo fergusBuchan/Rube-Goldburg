@@ -800,7 +800,7 @@ void APC::Spawn(FSaveStruct inputObject) {
 	AMachineObject* newObject = Cast<AMachineObject>(GetWorld()->SpawnActor(GameObjects[inputObject.objectIndex]));
 	if (newObject != NULL)
 	{
-		//newObject->Spawn();
+		newObject->Spawn();
 		newObject->SetActorLocation(inputObject.objectPosition);
 
 		newObject->SetActorRotation(inputObject.objectRotation);

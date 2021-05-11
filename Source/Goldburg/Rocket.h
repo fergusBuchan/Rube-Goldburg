@@ -29,4 +29,5 @@ public:
 	UPROPERTY(EditAnywhere)
 	float lifeTime;
 	float lifeTimer;
+	float launchTimer = 3;
 };

@@ -27,7 +27,7 @@ void ARocket::Tick(float DeltaTime)
 		}
 		//Body->SetPhysicsLinearVelocity(Body->GetUpVector() * Body->GetComponentVelocity().Size());
 		Body->AddForce(Body->GetUpVector() * ForwardVelocity);
-		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Vel: %f"), VelSave.Y));
+		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("Vel: %f"), Body->GetComponentLocation().Z));
 		//GEngine->AddOnScreenDebugMessage(-1, 0.03f, FColor::Orange, FString::Printf(TEXT("X: %f"), GetActorLocation().X));
 		velocity = Mesh->GetComponentVelocity().Size();
 	}
@@ -39,8 +39,10 @@ void ARocket::Tick(float DeltaTime)
 
 void ARocket::Launch()
 {
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Vel: %f"), Body->GetComponentLocation().Z));
 	Body->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	Body->SetSimulatePhysics(true);
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Vel: %f"), Body->GetComponentLocation().Z));
 	running = true;
 	lifeTimer = lifeTime;
 	IsActivated = true;
@@ -48,12 +50,14 @@ void ARocket::Launch()
 
 void ARocket::Activate()
 {
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Vel: %f"), Body->GetComponentLocation().Z));
 	Body->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
-	Body->SetSimulatePhysics(true);
-	//if (!linked)
-	//{
-	///	Launch();
-	//}
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, FString::Printf(TEXT("Vel: %f"), Body->GetComponentLocation().Z));
+	//Body->SetSimulatePhysics(true);
+	if (!linked)
+	{
+		Launch();
+	}
 }
 
 void ARocket::Reset()
