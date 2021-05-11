@@ -20,6 +20,10 @@ public:
 		FVector objectPosition;
 	UPROPERTY()
 		FRotator objectRotation;
+	UPROPERTY()
+		bool linked;
+	UPROPERTY()
+		int linkChannel;
 
 };
 
