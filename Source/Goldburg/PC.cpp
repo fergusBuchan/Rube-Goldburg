@@ -615,6 +615,7 @@ void APC::Zoom(float zoomDist)
 			CameraBoom->TargetArmLength += zoomDist;
 		}
 	}
+	//zoom for use by pinch functions, allowing the player to zoom in more incrimental ammounts
 }
 
 //get image of each object
@@ -826,6 +827,7 @@ void APC::Spawn(FSaveStruct inputObject) {
 			StaticObjects.Add(newObject);
 		}
 	}
+	// a spawn function for use by the load function 
 }
 
 void APC::AddObject(AMachineObject* InputPointer) {
@@ -860,6 +862,8 @@ void APC::AddObject(AMachineObject* InputPointer) {
 			StaticObjects.Add(InputPointer);
 		}
 	}
+
+	//function to add objects to the PC arrays. This is most helpful for the objects in pre - made saves
 }
 
 bool APC::Load(FString saveName) {
@@ -878,6 +882,7 @@ bool APC::Load(FString saveName) {
 			loadingSave->SaveName = saveName;
 			Spawn(loadingSave->SavedObjects[i]);
 		}
+		// we go through the objects in the save and add them to the scene
 		currentSave = saveName;
 		return true;
 
@@ -933,6 +938,8 @@ void APC::Save(FString saveName) {
 		savePtr->SavedObjects.Push(objPtr);
 	}
 
+	//get the poisions of the objects in the scene and add them to a save object
+
 	if (UGameplayStatics::SaveGameToSlot(savePtr, saveName, 0))
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, FString::Printf(TEXT("save sucsessful")));
@@ -940,6 +947,9 @@ void APC::Save(FString saveName) {
 	else {
 		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("save failed")));
 	}
+
+	//create a save on the player's computer
+	
 }
 
 

@@ -7,7 +7,7 @@
 #include "WorldSave.generated.h"
 
 /**
- * 
+ * simple class to contain obejcts when they are saved
  */
 USTRUCT()
 struct FSaveStruct

@@ -13,7 +13,7 @@ void AGoldburgGameModeBase::BeginPlay()
 
 	menuHUD = CreateWidget<UUserWidget>(GetWorld(), MenuHUDClass);
 	playerHUD = CreateWidget<UUserWidget>(GetWorld(), PlayerHUDClass);
-	if (GetWorld()->GetName() == "MainScene") {
+	if (GetWorld()->GetName() == "MainScene") {	// the main menu should not show up unless it's the main scene 
 		if (menuHUD != nullptr)
 		{
 			menuHUD->AddToViewport();

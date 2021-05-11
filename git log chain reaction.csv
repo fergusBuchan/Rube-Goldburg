@@ -1,0 +1,65 @@
+email,real name,date,commit name,commit id
+supperHot,Fergus Buchan,11/05/2021,save channel fix,c5ef38a
+1702707,Roald Naeri,11/05/2021,Build 0.99,e339151
+1702707,Roald Naeri,10/05/2021,Merge branch 'deafult-saves',5e66593
+1702707,Roald Naeri,10/05/2021,0.91,41a3025
+supperHot,Fergus Buchan,10/05/2021,deafault Saves,5fb213d
+BenParagreen,BenParagreen,10/05/2021,Help Menu Update,f7456c2
+1702707,Roald Naeri,10/05/2021,0.9,d66520d
+1702707,Roald Naeri,07/05/2021,Merge branch 'Scene-Changes',1880a9d
+1702707,Roald Naeri,07/05/2021,Outlines,a1bc7ad
+BenParagreen,BenParagreen,06/05/2021,Volcano Mesh Updated,6d80d9c
+BenParagreen,BenParagreen,05/05/2021,UI Update,bcdfc33
+1702707,Roald Naeri,05/05/2021,Help Merge 2,5ccf72f
+1702707,Roald Naeri,05/05/2021,Help Merge,0a4dd34
+1702707,Roald Naeri,05/05/2021,Merge branch 'pr/8',f32d10b
+BenParagreen,BenParagreen,05/05/2021,Branch update to be even with master,7e4c3ea
+BenParagreen,BenParagreen,05/05/2021,Merge branch 'master' into Scene-Changes,4c3c447
+BenParagreen,BenParagreen,05/05/2021,Model Update,6d3bbd3
+1702707,Roald Naeri,04/05/2021,Velocity,6574a2b
+1702707,Roald Naeri,04/05/2021,Merge branch 'Scene-Changes',de4b575
+Mckinlaydnl,Daniel Mckinlay,04/05/2021,Added Help/Tutorial UI,de8adfd
+BenParagreen,BenParagreen,04/05/2021,Outline Meshes,dda1a41
+BenParagreen,BenParagreen,04/05/2021,TrackUVsUpdated,5fdc0ed
+1702707,Roald Naeri,04/05/2021,Outlines,79e6aa2
+1702707,Roald Naeri,04/05/2021,Merge branch 'Shader_Branch',841043a
+Alternes,Alex Thursby,04/05/2021,Final Cel-Shader,d424d25
+BenParagreen,BenParagreen,03/05/2021,Particle Effects attatched to objects,d0c0718
+1702707,Roald Naeri,01/05/2021,0.7M,ac31fc1
+1702707,Roald Naeri,01/05/2021,Merge branch 'pinch-to-zoom',c0b4ac1
+1702707,Roald Naeri,01/05/2021,Merge branch 'Scene-Changes',091316b
+1702707,Roald Naeri,01/05/2021,Merge branch 'pr/7',f5c6165
+Mckinlaydnl,Daniel Mckinlay,30/04/2021,Added new audio and fixed audio issues,d259e08
+1702707,Roald Naeri,30/04/2021,0.7,247f9a2
+BenParagreen,BenParagreen,30/04/2021,Model and Particle Update,8c000af
+supperHot,Fergus Buchan,29/04/2021,commit 1,7a75502
+BenParagreen,BenParagreen,29/04/2021,Lighting Adjusted,127085e
+1702707,Roald Naeri,26/04/2021,Build 0.6,d40afcf
+1702707,Roald Naeri,25/04/2021,Merge branch 'master' of https://github.com/fergusBuchan/Rube-Goldburg,263fce2
+1702707,Roald Naeri,25/04/2021,Save,5af79ef
+Alternes,Alex Thursby,25/04/2021,Shader, Glass & Balloon Added
+1702707,Roald Naeri,24/04/2021,Merge branch 'pr/4',00822b3
+1702707,Roald Naeri,24/04/2021,4.25.4,8cfdaf7
+1702707,Roald Naeri,24/04/2021,Save for merge,6f7a503
+Mckinlaydnl,Daniel Mckinlay,23/04/2021,Added audio.,febdafe
+BATHTUBGERALT1,Jimmy Paterson,23/04/2021,UI Changes,92bb4ef
+1702707,Roald Naeri,20/04/2021,Save implemented with UI,d45b3eb
+1702707,Roald Naeri,20/04/2021,Merge branch 'master' of https://github.com/fergusBuchan/Rube-Goldburg,2191c5c
+1702707,Roald Naeri,20/04/2021,New Objects,5042ac1
+supperHot,Fergus Buchan,14/04/2021,save button update,0327d54
+1702707,Roald Naeri,09/04/2021,New Objects,43923c3
+1702707,Roald Naeri,06/04/2021,Quintuple Merge,f0875ff
+1702707,Roald Naeri,19/03/2021,Build 4,e17a547
+1702707,Roald Naeri,15/03/2021,Build 3 Complete,ca23c44
+1702707,Roald Naeri,15/03/2021,Test,d6a9139
+1702707,Roald Naeri,12/03/2021,/,0845b2f
+1702707,Roald Naeri,12/03/2021,Merge branch 'master' of https://github.com/fergusBuchan/Rube-Goldburg,7380af6
+1702707,Roald Naeri,12/03/2021,Override,468cbe7
+1702707,Roald Naeri,12/03/2021,Merge branch 'master' of https://github.com/fergusBuchan/Rube-Goldburg,692f66e
+1702707,Roald Naeri,12/03/2021,Build3 A2,93eced6
+1702707,Roald Naeri,11/03/2021,Merge branch 'master' of https://github.com/fergusBuchan/Rube-Goldburg,b0bc054
+1702707,Roald Naeri,10/03/2021,Build3,98baa52
+supperHot,Fergus Buchan,07/03/2021,menu added,d53b90c
+1702707,Roald Naeri,18/02/2021,New Objects,ce97621
+1702707,Roald Naeri,15/02/2021,Main Scene,89f0e37
+supperHot,Fergus Buchan,27/01/2021,Initial commit,587eb06
